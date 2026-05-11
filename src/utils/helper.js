@@ -17,3 +17,12 @@ export function getUnixTimestamp(titleAttr) {
 
   return unixSeconds;
 }
+
+export function capitalizeFirstLetter(string) {
+  return string.replace(/^./, string[0].toUpperCase());
+}
+
+export function getLast(values) {
+    return values.at(-1)
+}
+

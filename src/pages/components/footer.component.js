@@ -1,5 +1,6 @@
 import { expect } from 'playwright/test';
 import logger from "../../utils/logger/logger";
+import {step} from "allure-js-commons";
 
 
 const log = logger.child({ component: "FooterComponent" });
@@ -11,7 +12,9 @@ export default class FooterComponent {
   }
 
   async clickMoreBtn() {
-    await this.moreBtn.click();
+    await step('Click "More" Button',  async () => {
+      await this.moreBtn.click();
+    });
   }
 
   async loadNextRows(table) {

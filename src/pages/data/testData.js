@@ -7,3 +7,13 @@ export const LOGIN_PAGE_TITLE = `Login`;
 
 export const ROW_COUNT_ON_PAGE = 30;
 export const ROWS_100 = 100;
+
+export const ROWS_PER_PAGE = {
+    values: [5, 10, 15, 25],
+    FIVE: 5,
+    TEN: 10,
+    FIFTEEN: 15,
+    TWENTY_FIVE: 25,
+};
+
+export const SEARCH_VALUE = 'mich';

@@ -1,4 +1,4 @@
-import { getUnixTimestamp } from '../../utils/helper';
+import {getUnixTimestamp} from '../../utils/helper';
 import logger from "../../utils/logger/logger";
 
 const log = logger.child({ component: "TableComponent" });
@@ -17,9 +17,7 @@ export default class TableComponent {
 
   async rowCount() {
     const rows = await this.getRows();
-    const count = await rows.count();
-
-    return count;
+    return await rows.count();
   }
 
   async getRank(index) {

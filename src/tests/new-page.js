@@ -1,5 +1,6 @@
 import { test, expect } from '../fixtures/page-setup';
 import { NEW_PAGE_TITLE, ROWS_100 } from '../pages/data/testData';
+import { description, tag, severity, Severity, link, epic, step } from 'allure-js-commons';
 
 
 test('User should be able to log in successfully', async ({ newPage }) => {
@@ -16,8 +17,17 @@ test.describe('New Page validation', () => {
   test('Validate that EXACTLY the first 100 articles are sorted from newest to oldest', async ({
     newPage,
   }) => {
+
+    await description('Validate that EXACTLY the first 100 articles are sorted from newest to oldest.');
+    await tag('Table sorting');
+    await severity(Severity.CRITICAL);
+    // await link(`${QASE_LINK}/SIGN-3`, 'Qase: SIGN-3');
+    // await link(`${GOOGLE_DOC_LINK}ygd7jqo6djdj`, 'ATC_01_03_01');
+    await epic('Newest Articles');
+
     const table = newPage.getTable();
     const footer = newPage.getFooter();
+
 
     let reachedLimit = false;
     let previousTime = null;

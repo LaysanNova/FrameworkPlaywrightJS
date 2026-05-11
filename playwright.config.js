@@ -37,6 +37,7 @@ module.exports = defineConfig({
     launchOptions: {
       slowMo: process.env.CI ? 0 : 1000,
     },
+    testIdAttribute: 'data-cy',
   },
 
   /* Configure projects for major browsers */

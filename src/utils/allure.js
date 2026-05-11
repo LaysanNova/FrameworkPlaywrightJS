@@ -10,6 +10,7 @@ function createEnvironment() {
         env: process.env.ENV || 'local',
         browser: process.env.BROWSER || 'chromium',
         base_url: process.env.URL || 'not set',
+        table_url: process.env.TABLE_URL || 'not set',
     };
 
     const content = Object.entries(data)
