@@ -41,7 +41,9 @@ export default class EmployeePage {
                 type: 'text',
             },
         };
+        this.rowsPerPage = this.#page.getByTestId('rows-per-page');
         this.searchPlaceholder = this.#page.getByRole('textbox', { name: 'Search by name, email...' });
+
     }
 
     get columns() {
@@ -68,7 +70,7 @@ export default class EmployeePage {
     }
 
     async clickRowsPerPage(option) {
-        await this.#page.getByTestId('rows-per-page').selectOption(String(option));
+        await this.rowsPerPage.selectOption(String(option));
         await this.#page.waitForTimeout(300);
     }
 
@@ -110,6 +112,10 @@ export default class EmployeePage {
             });
         }
         return data;
+    }
+
+    async getTableRows() {
+        return this.#rows;
     }
 
     async searchFor(value){

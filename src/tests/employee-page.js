@@ -105,37 +105,65 @@ test.describe('Test pagination navigation', () => {
     });
 
 
-    test('Verify default first page loads correctly', async ({employeeTable}) => {
-        // const rowCount = await employeeTable.rowCount();
-        // expect(rowCount).toEqual(ROWS_PER_PAGE.FIVE);
-        // await expect(await employeeTable.paginateFirst).toBeDisabled();
-        // await expect(await employeeTable.paginatePrev).toBeDisabled();
-        // await expect(await employeeTable.paginationInfo).toContainText('Page 1 of');
-        //
-        // const paginationInfo = extractPaginationInfo(await employeeTable.paginationInfo.textContent());
-        // console.log(`Total pages: ${paginationInfo}`);
-        //
-        //
-        // await employeeTable.clickPaginationNext();
-        // await expect(await employeeTable.paginateFirst).toBeEnabled();
+    test('Verify default first page loads correctly and pagination function is correct', async ({employeeTable}) => {
+        const rowCount = await employeeTable.rowCount();
+
+        const dropdown = await employeeTable.rowsPerPage;
+        await expect(dropdown).toHaveValue(ROWS_PER_PAGE.FIVE.toString());
+        expect(rowCount).toEqual(ROWS_PER_PAGE.FIVE);
+
+        await expect(await employeeTable.paginateFirst).toBeDisabled();
+        await expect(await employeeTable.paginatePrev).toBeDisabled();
+        await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
+
+        await expect(await employeeTable.paginateNext).toBeEnabled();
+        await expect(await employeeTable.paginateLast).toBeEnabled();
+
+        await employeeTable.clickPaginationNext();
+        await expect(await employeeTable.paginatePrev).toBeEnabled();
+        await expect(await employeeTable.paginateFirst).toBeEnabled();
+
+
+        await employeeTable.clickPaginationLast();
+        await expect(await employeeTable.paginateNext).toBeDisabled();
+        await expect(await employeeTable.paginateLast).toBeDisabled();
+        await expect(await employeeTable.paginationInfo).toContainText('Page 3 of 3');
     });
 
-    test('Click Next → goes to next page', async ({employeeTable}) => {
+    test('Verify pagination keeps consistent data', async ({employeeTable}) => {
+        const rows = await employeeTable.getTableRows();
+        const firstPageData = await rows.allTextContents();
 
+        await employeeTable.clickPaginationLast();
+        const lastPageData = await rows.allTextContents();
+        expect(lastPageData).not.toEqual(firstPageData);
+
+        await employeeTable.clickPaginationFirst();
+        const firstPageDataAgain = await rows.allTextContents();
+        expect(firstPageDataAgain).toEqual(firstPageData);
     });
 
-    test('Click Previous → goes back one page', async ({employeeTable}) => {
-
-    });
-
-
-    test('Click First page → goes to page 1 (if exists)', async ({employeeTable}) => {
-
-    });
-
-    test('Click Last page → goes to last page (if exists)', async ({employeeTable}) => {
-
-    });
+    // test('Click Next → goes to next page', async ({employeeTable}) => {
+    //
+    // });
+    //
+    // test('Click Previous → goes back one page', async ({employeeTable}) => {
+    //
+    // });
+    //
+    //
+    // test('Click First page → goes to page 1 (if exists)', async ({employeeTable}) => {
+    //
+    // });
+    //
+    // test('Click Last page → goes to last page (if exists)', async ({employeeTable}) => {
+    //     const paginationInfo = extractPaginationInfo(await employeeTable.paginationInfo.textContent());
+    //     console.log(`Total pages: ${paginationInfo}`);
+    //
+    //
+    //     await employeeTable.clickPaginationNext();
+    //     await expect(await employeeTable.paginateFirst).toBeEnabled();
+    // });
 });
 
 //Verify Item Counts: Confirm that the number of items displayed on each page matches the expected "items per page" setting.
