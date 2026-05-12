@@ -1,0 +1,12 @@
+[2026-05-12 15:28:21.919 +0000] INFO: Successfully navigated to 'login'
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-12 15:28:22.185 +0000] INFO: Navigating to 'Hacker News'
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-12 15:28:22.332 +0000] INFO: Successfully navigated to 'Hacker News'
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
