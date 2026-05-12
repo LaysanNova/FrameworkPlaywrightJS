@@ -1,6 +1,8 @@
 import { test, expect } from '../fixtures/page-setup';
 import { NEW_PAGE_TITLE, ROWS_100 } from '../pages/data/testData';
 import { description, tag, severity, Severity, link, epic, step } from 'allure-js-commons';
+import MenuComponent from "../pages/components/menu.component";
+import {loginUser} from "../utils/login-utils";
 
 
 test('User should be able to log in successfully', async ({ newPage }) => {
