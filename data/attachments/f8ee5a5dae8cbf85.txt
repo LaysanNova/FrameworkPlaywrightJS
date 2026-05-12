@@ -1,0 +1,4 @@
+[2026-05-12 15:14:52.660 +0000] INFO: Successfully navigated to 'login'
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
