@@ -9,20 +9,11 @@ on:
 
 jobs:
   test:
-    name: Run Tests
+    timeout-minutes: 30
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-
-    env:
-      URL: ${{ secrets.URL }}
-      SORT_TABLE: ${{ secrets.SORT_TABLE }}
-      EMPLOYEE_TABLE: ${{ secrets.EMPLOYEE_TABLE }}
-      USER_NAME: ${{ secrets.USER_NAME }}
-      USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-      CI: true
 
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -34,16 +25,21 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Chromium
-        run: npx playwright install chromium --with-deps
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
 
-      - name: Run tests
-        run: npx playwright test --project=chromium
+      - name: Run Playwright tests (Chrome)
+        run: npx playwright test
+        env:
+          URL: ${{ secrets.URL }}
+          SORT_TABLE: ${{ secrets.SORT_TABLE }}
+          EMPLOYEE_TABLE: ${{ secrets.EMPLOYEE_TABLE }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
 
-      - name: Install Allure CLI
-        run: npm install -g allure-commandline --save-dev
+          CI: true
 
-      - name: Upload Playwright report
+      - name: Upload Playwright HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -51,7 +47,7 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-      - name: Upload test results
+      - name: Upload test results (on failure)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
@@ -60,7 +56,7 @@ jobs:
 
       # -------- ALLURE --------
 
-      - name: Checkout gh-pages branch
+      - name: Checkout gh-pages branch (Allure history)
         if: always()
         uses: actions/checkout@v4
         continue-on-error: true
@@ -72,11 +68,11 @@ jobs:
         if: always()
         run: npx allure generate allure-results -o allure-report --clean
 
-      - name: Copy Allure history
+      - name: Save Allure history
         if: always()
         run: |
           mkdir -p allure-report/history
-          cp -r gh-pages/history/. allure-report/history || true
+          cp -r gh-pages/history allure-report/history || true
 
       - name: Deploy Allure report to GitHub Pages
         if: always()
