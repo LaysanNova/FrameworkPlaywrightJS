@@ -1,6 +1,8 @@
 import { test, expect } from '../fixtures/page-setup';
 import { NEW_PAGE_TITLE, ROWS_100 } from '../pages/data/testData';
 import { description, tag, severity, Severity, link, epic, step } from 'allure-js-commons';
+import MenuComponent from "../pages/components/menu.component";
+import {loginUser} from "../utils/login-utils";
 
 
 test('User should be able to log in successfully', async ({ newPage }) => {
@@ -11,7 +13,7 @@ test('User should be able to log in successfully', async ({ newPage }) => {
 test.describe('New Page validation', () => {
 
   test('New page title validation', async ({ newPage }) => {
-    await expect(newPage.getPage()).toHaveTitle(NEW_PAGE_TITLE);
+    await expect(newPage.page).toHaveTitle(NEW_PAGE_TITLE);
   });
 
   test('Validate that EXACTLY the first 100 articles are sorted from newest to oldest', async ({

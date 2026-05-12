@@ -4,6 +4,6 @@ import {HACKER_NEWS_PAGE_TITLE} from "../pages/data/testData";
 
 test.describe('Hacker News Page validation', () => {
     test('Hacker news page title validation', async ({ hnewsPage }) => {
-        await expect(hnewsPage.getPage()).toHaveTitle(HACKER_NEWS_PAGE_TITLE);
+        await expect(hnewsPage.page).toHaveTitle(HACKER_NEWS_PAGE_TITLE);
     });
 });
