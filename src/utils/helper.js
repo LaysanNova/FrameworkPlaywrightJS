@@ -26,3 +26,16 @@ export function getLast(values) {
     return values.at(-1)
 }
 
+export function extractPaginationInfo(string) {
+  const match = string.match(/Page\s+(\d+)\s+of\s+(\d+)/i);
+
+  if (!match) {
+    throw new Error(`Invalid pagination format: ${text}`);
+  }
+
+  return {
+    currentPage: Number(match[1]),
+    totalPages: Number(match[2]),
+  };
+}
+
