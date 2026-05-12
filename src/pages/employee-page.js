@@ -142,10 +142,6 @@ export default class EmployeePage {
         await this.paginateLast.click();
     }
 
-    async clickPaginationLast(){
-        await this.paginateLast.click();
-    }
-
     async getTotalEmployees(){
         return await this.#page
             .getByText('Total Employees')
@@ -153,5 +149,3 @@ export default class EmployeePage {
             .textContent();
     }
 }
-
-// await this.page.pause();
