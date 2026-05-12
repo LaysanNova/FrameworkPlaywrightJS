@@ -42,11 +42,29 @@ export default class EmployeePage {
             },
         };
         this.searchPlaceholder = this.#page.getByRole('textbox', { name: 'Search by name, email...' });
-
     }
 
     get columns() {
         return this.#columns;
+    }
+
+    get paginateFirst() {
+        return this.#page.getByTestId('pagination-first');
+    }
+    get paginatePrev() {
+        return this.#page.getByTestId('pagination-prev');
+    }
+
+    get paginateNext() {
+        return this.#page.getByTestId('pagination-next');
+    }
+
+    get paginateLast() {
+        return this.#page.getByTestId('pagination-last');
+    }
+
+    get paginationInfo() {
+        return this.#page.getByTestId('pagination-info');
     }
 
     async clickRowsPerPage(option) {
@@ -100,6 +118,33 @@ export default class EmployeePage {
 
     async clearSearch(){
         await this.searchFor("");
+    }
+
+    async clickPaginationFirst(){
+        await this.paginateFirst.click();
+    }
+
+    async clickPaginationPrev(){
+        await this.paginatePrev.click();
+    }
+
+    async clickPaginationNext(){
+        await this.paginateNext.click();
+    }
+
+    async clickPaginationLast(){
+        await this.paginateLast.click();
+    }
+
+    async clickPaginationLast(){
+        await this.paginateLast.click();
+    }
+
+    async getTotalEmployees(){
+        return await this.#page
+            .getByText('Total Employees')
+            .locator('xpath=following-sibling::div[1]')
+            .textContent();
     }
 }
 

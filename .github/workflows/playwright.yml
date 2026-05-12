@@ -20,6 +20,8 @@ jobs:
         run: npm test
         env:
           URL: ${{ secrets.URL}}
+          SORT_TABLE: ${{ secrets.SORT_TABLE }}
+          EMPLOYEE_TABLE: ${{ secrets.EMPLOYEE_TABLE }}
           USER_NAME: ${{ secrets.USER_NAME }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
           CI_RUN: true

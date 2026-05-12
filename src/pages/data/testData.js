@@ -5,7 +5,7 @@ export const PAST_PAGE_TITLE = `${getYesterdayDate()} front | Hacker News`;
 export const HACKER_NEWS_PAGE_TITLE = `Hacker News`;
 export const LOGIN_PAGE_TITLE = `Login`;
 
-export const ROW_COUNT_ON_PAGE = 30;
+export const ROWS_30 = 30;
 export const ROWS_100 = 100;
 
 export const ROWS_PER_PAGE = {
@@ -16,4 +16,4 @@ export const ROWS_PER_PAGE = {
     TWENTY_FIVE: 25,
 };
 
-export const SEARCH_VALUE = 'mich';
+export const SEARCH_VALUE = ['mich','dan.h@company.com'];
