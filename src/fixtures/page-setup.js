@@ -37,20 +37,6 @@ export const test = base.extend({
     );
     await use(hnewsPage);
   },
-
-  smallTable: async ({ page }, use) => {
-    await page.goto(process.env.TRISTEN_TABLE);
-
-    const smallTable = new TablePage(page);
-    await use(smallTable);
-  },
-
-  assertqa: async ({ page }, use) => {
-    await page.goto(process.env.WEB_TABLE);
-
-    const assertqa = new TablePage(page);
-    await use(assertqa);
-  }
 });
 
 export const expect = test.expect;

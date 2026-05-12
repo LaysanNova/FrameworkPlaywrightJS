@@ -6,10 +6,9 @@ export default class BasePage {
   #menu;
   #table;
   #footer;
-  #page;
 
   constructor(page) {
-    this.#page = page;
+    this.page = page;
     this.#menu = new MenuComponent(page);
     this.#table = new TableComponent(page);
     this.#footer = new FooterComponent(page);
@@ -25,9 +24,5 @@ export default class BasePage {
 
   getFooter() {
     return this.#footer;
-  }
-
-  getPage() {
-    return this.#page;
   }
 }

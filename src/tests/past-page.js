@@ -3,6 +3,6 @@ import { PAST_PAGE_TITLE } from '../pages/data/testData';
 
 test.describe('Past News Page validation', () => {
   test('Past page title validation', async ({pastPage}) => {
-    await expect(pastPage.getPage()).toHaveTitle(PAST_PAGE_TITLE);
+    await expect(pastPage.page).toHaveTitle(PAST_PAGE_TITLE);
   });
 });

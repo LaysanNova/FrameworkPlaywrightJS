@@ -11,7 +11,7 @@ test('User should be able to log in successfully', async ({ newPage }) => {
 test.describe('New Page validation', () => {
 
   test('New page title validation', async ({ newPage }) => {
-    await expect(newPage.getPage()).toHaveTitle(NEW_PAGE_TITLE);
+    await expect(newPage.page).toHaveTitle(NEW_PAGE_TITLE);
   });
 
   test('Validate that EXACTLY the first 100 articles are sorted from newest to oldest', async ({
