@@ -1,0 +1,526 @@
+[2026-05-12 23:15:11.128 +0000] INFO: Navigating to 'new' page
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-12 23:15:11.304 +0000] INFO: Successfully navigated to 'new' page
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-12 23:15:11.397 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 0
+[2026-05-12 23:15:11.421 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 1
+[2026-05-12 23:15:11.448 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 2
+[2026-05-12 23:15:11.469 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 3
+[2026-05-12 23:15:11.492 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 4
+[2026-05-12 23:15:11.514 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 5
+[2026-05-12 23:15:11.536 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 6
+[2026-05-12 23:15:11.563 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 7
+[2026-05-12 23:15:11.587 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 8
+[2026-05-12 23:15:11.608 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 9
+[2026-05-12 23:15:11.628 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 10
+[2026-05-12 23:15:11.649 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 11
+[2026-05-12 23:15:11.672 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 12
+[2026-05-12 23:15:11.692 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 13
+[2026-05-12 23:15:11.711 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 14
+[2026-05-12 23:15:11.730 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 15
+[2026-05-12 23:15:11.751 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 16
+[2026-05-12 23:15:11.772 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 17
+[2026-05-12 23:15:11.794 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 18
+[2026-05-12 23:15:11.814 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 19
+[2026-05-12 23:15:11.834 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 20
+[2026-05-12 23:15:11.854 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 21
+[2026-05-12 23:15:11.882 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 22
+[2026-05-12 23:15:11.901 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 23
+[2026-05-12 23:15:11.921 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 24
+[2026-05-12 23:15:11.940 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 25
+[2026-05-12 23:15:11.970 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 26
+[2026-05-12 23:15:11.990 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 27
+[2026-05-12 23:15:12.011 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 28
+[2026-05-12 23:15:12.033 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 29
+[2026-05-12 23:15:12.249 +0000] INFO: Validating that new rows are loaded
+    service: "ui-tests"
+    env: "development"
+    component: "FooterComponent"
+    lastRank: 30
+    nextRank: 31
+[2026-05-12 23:15:12.287 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 0
+[2026-05-12 23:15:12.312 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 1
+[2026-05-12 23:15:12.331 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 2
+[2026-05-12 23:15:12.350 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 3
+[2026-05-12 23:15:12.369 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 4
+[2026-05-12 23:15:12.389 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 5
+[2026-05-12 23:15:12.418 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 6
+[2026-05-12 23:15:12.436 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 7
+[2026-05-12 23:15:12.455 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 8
+[2026-05-12 23:15:12.475 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 9
+[2026-05-12 23:15:12.495 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 10
+[2026-05-12 23:15:12.514 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 11
+[2026-05-12 23:15:12.532 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 12
+[2026-05-12 23:15:12.551 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 13
+[2026-05-12 23:15:12.569 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 14
+[2026-05-12 23:15:12.588 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 15
+[2026-05-12 23:15:12.610 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 16
+[2026-05-12 23:15:12.629 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 17
+[2026-05-12 23:15:12.648 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 18
+[2026-05-12 23:15:12.666 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 19
+[2026-05-12 23:15:12.685 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 20
+[2026-05-12 23:15:12.704 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 21
+[2026-05-12 23:15:12.722 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 22
+[2026-05-12 23:15:12.741 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 23
+[2026-05-12 23:15:12.760 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 24
+[2026-05-12 23:15:12.779 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 25
+[2026-05-12 23:15:12.798 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 26
+[2026-05-12 23:15:12.816 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 27
+[2026-05-12 23:15:12.838 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 28
+[2026-05-12 23:15:12.857 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 29
+[2026-05-12 23:15:13.068 +0000] INFO: Validating that new rows are loaded
+    service: "ui-tests"
+    env: "development"
+    component: "FooterComponent"
+    lastRank: 60
+    nextRank: 61
+[2026-05-12 23:15:13.108 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 0
+[2026-05-12 23:15:13.128 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 1
+[2026-05-12 23:15:13.148 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 2
+[2026-05-12 23:15:13.167 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 3
+[2026-05-12 23:15:13.186 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 4
+[2026-05-12 23:15:13.205 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 5
+[2026-05-12 23:15:13.234 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 6
+[2026-05-12 23:15:13.254 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 7
+[2026-05-12 23:15:13.272 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 8
+[2026-05-12 23:15:13.291 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 9
+[2026-05-12 23:15:13.309 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 10
+[2026-05-12 23:15:13.330 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 11
+[2026-05-12 23:15:13.350 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 12
+[2026-05-12 23:15:13.368 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 13
+[2026-05-12 23:15:13.390 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 14
+[2026-05-12 23:15:13.410 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 15
+[2026-05-12 23:15:13.428 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 16
+[2026-05-12 23:15:13.447 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 17
+[2026-05-12 23:15:13.465 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 18
+[2026-05-12 23:15:13.483 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 19
+[2026-05-12 23:15:13.502 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 20
+[2026-05-12 23:15:13.521 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 21
+[2026-05-12 23:15:13.540 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 22
+[2026-05-12 23:15:13.558 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 23
+[2026-05-12 23:15:13.579 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 24
+[2026-05-12 23:15:13.597 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 25
+[2026-05-12 23:15:13.616 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 26
+[2026-05-12 23:15:13.634 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 27
+[2026-05-12 23:15:13.653 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 28
+[2026-05-12 23:15:13.671 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 29
+[2026-05-12 23:15:13.863 +0000] INFO: Validating that new rows are loaded
+    service: "ui-tests"
+    env: "development"
+    component: "FooterComponent"
+    lastRank: 90
+    nextRank: 91
+[2026-05-12 23:15:13.900 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 0
+[2026-05-12 23:15:13.921 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 1
+[2026-05-12 23:15:13.940 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 2
+[2026-05-12 23:15:13.959 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 3
+[2026-05-12 23:15:13.977 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 4
+[2026-05-12 23:15:13.996 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 5
+[2026-05-12 23:15:14.017 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 6
+[2026-05-12 23:15:14.038 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 7
+[2026-05-12 23:15:14.056 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 8
+[2026-05-12 23:15:14.076 +0000] INFO: Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+    rowIndex: 9
