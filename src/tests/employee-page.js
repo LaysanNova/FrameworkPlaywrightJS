@@ -227,6 +227,3 @@ test.describe('Test pagination navigation', () => {
 //     Buttons are keyboard accessible (Tab, Enter)
 //     Screen reader labels exist for pagination controls
 //     If you want to sound strong in interview
-
-
-
