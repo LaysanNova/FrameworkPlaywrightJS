@@ -9,8 +9,8 @@ async function navigateToPage(page, PageClass, menuAction) {
   const menu = new MenuComponent(page);
 
   await page.goto('/');
-  await menu.goToLogin();
-  await loginUser(page);
+  // await menu.goToLogin();
+  // await loginUser(page);
 
   await menuAction(menu);
   return new PageClass(page);
