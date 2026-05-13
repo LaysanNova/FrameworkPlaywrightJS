@@ -120,14 +120,27 @@ test.describe('Test pagination navigation', () => {
         await expect(await employeeTable.paginateLast).toBeEnabled();
 
         await employeeTable.clickPaginationNext();
+        await expect(await employeeTable.paginationInfo).toContainText('Page 2 of 3');
         await expect(await employeeTable.paginatePrev).toBeEnabled();
         await expect(await employeeTable.paginateFirst).toBeEnabled();
 
+        await employeeTable.clickPaginationPrev();
+        await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
 
         await employeeTable.clickPaginationLast();
         await expect(await employeeTable.paginateNext).toBeDisabled();
         await expect(await employeeTable.paginateLast).toBeDisabled();
         await expect(await employeeTable.paginationInfo).toContainText('Page 3 of 3');
+    });
+
+    test('Single Page: Verify that pagination controls are hidden if all items fit on one page.', async ({employeeTable}) => {
+        await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
+
+        await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 1');
+        await expect(await employeeTable.paginateFirst).toBeDisabled();
+        await expect(await employeeTable.paginatePrev).toBeDisabled();
+        await expect(await employeeTable.paginateNext).toBeDisabled();
+        await expect(await employeeTable.paginateLast).toBeDisabled();
     });
 
     test('Verify pagination keeps consistent data', async ({employeeTable}) => {
@@ -143,87 +156,15 @@ test.describe('Test pagination navigation', () => {
         expect(firstPageDataAgain).toEqual(firstPageData);
     });
 
-    // test('Click Next → goes to next page', async ({employeeTable}) => {
-    //
-    // });
-    //
-    // test('Click Previous → goes back one page', async ({employeeTable}) => {
-    //
-    // });
-    //
-    //
-    // test('Click First page → goes to page 1 (if exists)', async ({employeeTable}) => {
-    //
-    // });
-    //
-    // test('Click Last page → goes to last page (if exists)', async ({employeeTable}) => {
-    //     const paginationInfo = extractPaginationInfo(await employeeTable.paginationInfo.textContent());
-    //     console.log(`Total pages: ${paginationInfo}`);
-    //
-    //
-    //     await employeeTable.clickPaginationNext();
-    //     await expect(await employeeTable.paginateFirst).toBeEnabled();
-    // });
+    test('Verify disabled next page shows not-allowed cursor', async ({employeeTable}) => {
+        await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
+
+        const nextPageButton = employeeTable.paginateNext;
+        await nextPageButton.hover();
+        const cursor = await nextPageButton.evaluate((el) => {
+            return window.getComputedStyle(el).cursor;
+        });
+
+        expect(cursor).toBe('not-allowed');
+    });
 });
-
-//Verify Item Counts: Confirm that the number of items displayed on each page matches the expected "items per page" setting.
-//Test Navigation Links: Click "Next," "Previous," and specific page numbers to ensure the correct data loads.
-//Validate Page State: Ensure the current page number is highlighted or visually distinct (e.g., active class).
-//Validate Page State: Ensure the current page number is highlighted or visually distinct (e.g., active class).
-//  First/Last Page: Verify that "Previous" is disabled on page 1 and "Next" is disabled on the last page.
-//  Zero Items: Verify that no pagination controls are shown when no data is available.
-//  Single Page: Verify that pagination controls are hidden if all items fit on one page.
-//URL/State Persistence: Confirm that navigating to a specific page updates the URL (e.g., ?page=3) so the page can be bookmarked or shared.
-
-
-// 1. Basic navigation (core functionality)
-// Verify default page loads correctly (usually page 1)
-// Click Next → goes to next page
-// Click Previous → goes back one page
-// Click specific page number → opens correct page
-// Click First page → goes to page 1 (if exists)
-//     Click Last page → goes to last page (if exists)
-//     2. Boundary conditions
-// On first page:
-//     Previous is disabled / inactive
-// On last page:
-//     Next is disabled / inactive
-// Try clicking Next on last page → no change happens
-// Try clicking Previous on first page → no change happens
-// 3. Data correctness
-// Each page shows correct number of items (e.g. 10 per page)
-// No duplicate records between pages
-// No missing records across pagination
-// Last page shows remaining items correctly (less than page size)
-// 4. Page state consistency
-// Current page is highlighted correctly
-// Page number updates correctly in UI
-// URL updates correctly (if pagination is URL-based)
-// Refreshing page keeps correct page state (if required)
-//     5. Navigation behavior under actions
-// Pagination works after sorting
-// Pagination works after filtering/search
-// Switching filter resets or keeps page correctly (based on requirements)
-// Data stays consistent after refresh or re-fetch
-// 6. Edge cases
-// Only 1 page:
-//     pagination controls hidden or disabled
-// No data:
-//     empty state shown, no pagination displayed
-// Very large number of pages:
-//     page numbers render correctly (or use ellipsis like “…”)
-// API failure:
-//     error shown, pagination doesn’t break UI
-// 7. UI/UX checks
-// Buttons are enabled/disabled correctly
-// Loading indicator appears when switching pages (if async)
-//     No flickering or UI glitches on page change
-// Smooth transition between pages
-// 8. Performance (important for QA interviews)
-// Page switch is fast and responsive
-//     No duplicate API calls on single click
-//     No lag when jumping between distant pages
-//     9. Accessibility (bonus but strong signal)
-//     Buttons are keyboard accessible (Tab, Enter)
-//     Screen reader labels exist for pagination controls
-//     If you want to sound strong in interview
