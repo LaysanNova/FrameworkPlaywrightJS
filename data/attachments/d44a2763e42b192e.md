@@ -1,0 +1,1126 @@
+# Page snapshot
+
+```yaml
+- table [ref=e3]:
+  - rowgroup [ref=e4]:
+    - row "Hacker Newsnew | past | comments | ask | show | jobs | submit login" [ref=e5]:
+      - cell "Hacker Newsnew | past | comments | ask | show | jobs | submit login" [ref=e6]:
+        - table [ref=e7]:
+          - rowgroup [ref=e8]:
+            - row "Hacker Newsnew | past | comments | ask | show | jobs | submit login" [ref=e9]:
+              - cell [ref=e10]:
+                - link [ref=e11] [cursor=pointer]:
+                  - /url: https://news.ycombinator.com
+                  - img [ref=e12]
+              - cell "Hacker Newsnew | past | comments | ask | show | jobs | submit" [ref=e13]:
+                - generic [ref=e14]:
+                  - link "Hacker News" [ref=e16] [cursor=pointer]:
+                    - /url: news
+                  - link "new" [ref=e18] [cursor=pointer]:
+                    - /url: newest
+                  - text: "|"
+                  - link "past" [ref=e19] [cursor=pointer]:
+                    - /url: front
+                  - text: "|"
+                  - link "comments" [ref=e20] [cursor=pointer]:
+                    - /url: newcomments
+                  - text: "|"
+                  - link "ask" [ref=e21] [cursor=pointer]:
+                    - /url: ask
+                  - text: "|"
+                  - link "show" [ref=e22] [cursor=pointer]:
+                    - /url: show
+                  - text: "|"
+                  - link "jobs" [ref=e23] [cursor=pointer]:
+                    - /url: jobs
+                  - text: "|"
+                  - link "submit" [ref=e24] [cursor=pointer]:
+                    - /url: submit
+              - cell "login" [ref=e25]:
+                - link "login" [ref=e27] [cursor=pointer]:
+                  - /url: login?goto=newest
+    - row [ref=e28]
+    - row [ref=e29]:
+      - cell [ref=e30]:
+        - table [ref=e31]:
+          - rowgroup [ref=e32]:
+            - 'row "1. upvote Show HN: One memory layer across every MCP-compatible AI tool (subvault.ai)" [ref=e33]':
+              - cell "1." [ref=e34]
+              - cell "upvote" [ref=e35]:
+                - link "upvote" [ref=e37] [cursor=pointer]:
+                  - /url: vote?id=48117674&how=up&goto=newest
+                  - generic "upvote" [ref=e38]
+              - 'cell "Show HN: One memory layer across every MCP-compatible AI tool (subvault.ai)" [ref=e39]':
+                - generic [ref=e40]:
+                  - 'link "Show HN: One memory layer across every MCP-compatible AI tool" [ref=e41] [cursor=pointer]':
+                    - /url: https://subvault.ai
+                  - generic [ref=e42]:
+                    - text: (
+                    - link "subvault.ai" [ref=e43] [cursor=pointer]:
+                      - /url: from?site=subvault.ai
+                    - text: )
+            - row "1 point by gavinb-code 6 minutes ago | hide | past | discuss" [ref=e44]:
+              - cell [ref=e45]
+              - cell "1 point by gavinb-code 6 minutes ago | hide | past | discuss" [ref=e46]:
+                - generic [ref=e47]:
+                  - text: 1 point by
+                  - link "gavinb-code" [ref=e48] [cursor=pointer]:
+                    - /url: user?id=gavinb-code
+                  - generic "2026-05-13T04:05:07 1778645107" [ref=e49]:
+                    - link "6 minutes ago" [ref=e50] [cursor=pointer]:
+                      - /url: item?id=48117674
+                  - text: "|"
+                  - link "hide" [ref=e51] [cursor=pointer]:
+                    - /url: hide?id=48117674&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e52] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Show%20HN%3A%20One%20memory%20layer%20across%20every%20MCP-compatible%20AI%20tool&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e53] [cursor=pointer]:
+                    - /url: item?id=48117674
+            - row [ref=e54]
+            - 'row "2. upvote Reasoning-core: 130M-param guardrail keeping AI agents honest (github.com/jakubkrzysztofsikora)" [ref=e55]':
+              - cell "2." [ref=e56]
+              - cell "upvote" [ref=e57]:
+                - link "upvote" [ref=e59] [cursor=pointer]:
+                  - /url: vote?id=48117637&how=up&goto=newest
+                  - generic "upvote" [ref=e60]
+              - 'cell "Reasoning-core: 130M-param guardrail keeping AI agents honest (github.com/jakubkrzysztofsikora)" [ref=e61]':
+                - generic [ref=e62]:
+                  - 'link "Reasoning-core: 130M-param guardrail keeping AI agents honest" [ref=e63] [cursor=pointer]':
+                    - /url: https://github.com/jakubkrzysztofsikora/reasoning-core
+                  - generic [ref=e64]:
+                    - text: (
+                    - link "github.com/jakubkrzysztofsikora" [ref=e65] [cursor=pointer]:
+                      - /url: from?site=github.com/jakubkrzysztofsikora
+                    - text: )
+            - row "1 point by mnvibe26x7 12 minutes ago | hide | past | discuss" [ref=e66]:
+              - cell [ref=e67]
+              - cell "1 point by mnvibe26x7 12 minutes ago | hide | past | discuss" [ref=e68]:
+                - generic [ref=e69]:
+                  - text: 1 point by
+                  - link "mnvibe26x7" [ref=e70] [cursor=pointer]:
+                    - /url: user?id=mnvibe26x7
+                  - generic "2026-05-13T03:59:23 1778644763" [ref=e71]:
+                    - link "12 minutes ago" [ref=e72] [cursor=pointer]:
+                      - /url: item?id=48117637
+                  - text: "|"
+                  - link "hide" [ref=e73] [cursor=pointer]:
+                    - /url: hide?id=48117637&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e74] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Reasoning-core%3A%20130M-param%20guardrail%20keeping%20AI%20agents%20honest&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e75] [cursor=pointer]:
+                    - /url: item?id=48117637
+            - row [ref=e76]
+            - 'row "3. upvote Show HN: SWEny, YAML workflows for AI agents I''m running in prod (triage, E2E) (github.com/swenyai)" [ref=e77]':
+              - cell "3." [ref=e78]
+              - cell "upvote" [ref=e79]:
+                - link "upvote" [ref=e81] [cursor=pointer]:
+                  - /url: vote?id=48117635&how=up&goto=newest
+                  - generic "upvote" [ref=e82]
+              - 'cell "Show HN: SWEny, YAML workflows for AI agents I''m running in prod (triage, E2E) (github.com/swenyai)" [ref=e83]':
+                - generic [ref=e84]:
+                  - 'link "Show HN: SWEny, YAML workflows for AI agents I''m running in prod (triage, E2E)" [ref=e85] [cursor=pointer]':
+                    - /url: https://github.com/swenyai/sweny
+                  - generic [ref=e86]:
+                    - text: (
+                    - link "github.com/swenyai" [ref=e87] [cursor=pointer]:
+                      - /url: from?site=github.com/swenyai
+                    - text: )
+            - row "1 point by wickdninja 12 minutes ago | hide | past | discuss" [ref=e88]:
+              - cell [ref=e89]
+              - cell "1 point by wickdninja 12 minutes ago | hide | past | discuss" [ref=e90]:
+                - generic [ref=e91]:
+                  - text: 1 point by
+                  - link "wickdninja" [ref=e92] [cursor=pointer]:
+                    - /url: user?id=wickdninja
+                  - generic "2026-05-13T03:59:06 1778644746" [ref=e93]:
+                    - link "12 minutes ago" [ref=e94] [cursor=pointer]:
+                      - /url: item?id=48117635
+                  - text: "|"
+                  - link "hide" [ref=e95] [cursor=pointer]:
+                    - /url: hide?id=48117635&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e96] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Show%20HN%3A%20SWEny%2C%20YAML%20workflows%20for%20AI%20agents%20I%27m%20running%20in%20prod%20%28triage%2C%20E2E%29&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e97] [cursor=pointer]:
+                    - /url: item?id=48117635
+            - row [ref=e98]
+            - 'row "4. upvote Hex: Introducing Generative Data Apps (hex.tech)" [ref=e99]':
+              - cell "4." [ref=e100]
+              - cell "upvote" [ref=e101]:
+                - link "upvote" [ref=e103] [cursor=pointer]:
+                  - /url: vote?id=48117618&how=up&goto=newest
+                  - generic "upvote" [ref=e104]
+              - 'cell "Hex: Introducing Generative Data Apps (hex.tech)" [ref=e105]':
+                - generic [ref=e106]:
+                  - 'link "Hex: Introducing Generative Data Apps" [ref=e107] [cursor=pointer]':
+                    - /url: https://hex.tech/blog/introducing-generative-data-apps/
+                  - generic [ref=e108]:
+                    - text: (
+                    - link "hex.tech" [ref=e109] [cursor=pointer]:
+                      - /url: from?site=hex.tech
+                    - text: )
+            - row "1 point by tomtomau 14 minutes ago | hide | past | 1 comment" [ref=e110]:
+              - cell [ref=e111]
+              - cell "1 point by tomtomau 14 minutes ago | hide | past | 1 comment" [ref=e112]:
+                - generic [ref=e113]:
+                  - text: 1 point by
+                  - link "tomtomau" [ref=e114] [cursor=pointer]:
+                    - /url: user?id=tomtomau
+                  - generic "2026-05-13T03:56:49 1778644609" [ref=e115]:
+                    - link "14 minutes ago" [ref=e116] [cursor=pointer]:
+                      - /url: item?id=48117618
+                  - text: "|"
+                  - link "hide" [ref=e117] [cursor=pointer]:
+                    - /url: hide?id=48117618&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e118] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Hex%3A%20Introducing%20Generative%20Data%20Apps&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "1 comment" [ref=e119] [cursor=pointer]:
+                    - /url: item?id=48117618
+            - row [ref=e120]
+            - row "5. upvote The Space Shuttle and the Horse's Rear End (astrodigital.org)" [ref=e121]:
+              - cell "5." [ref=e122]
+              - cell "upvote" [ref=e123]:
+                - link "upvote" [ref=e125] [cursor=pointer]:
+                  - /url: vote?id=48117604&how=up&goto=newest
+                  - generic "upvote" [ref=e126]
+              - cell "The Space Shuttle and the Horse's Rear End (astrodigital.org)" [ref=e127]:
+                - generic [ref=e128]:
+                  - link "The Space Shuttle and the Horse's Rear End" [ref=e129] [cursor=pointer]:
+                    - /url: https://astrodigital.org/space/stshorse.html
+                  - generic [ref=e130]:
+                    - text: (
+                    - link "astrodigital.org" [ref=e131] [cursor=pointer]:
+                      - /url: from?site=astrodigital.org
+                    - text: )
+            - row "1 point by thunderbong 17 minutes ago | hide | past | discuss" [ref=e132]:
+              - cell [ref=e133]
+              - cell "1 point by thunderbong 17 minutes ago | hide | past | discuss" [ref=e134]:
+                - generic [ref=e135]:
+                  - text: 1 point by
+                  - link "thunderbong" [ref=e136] [cursor=pointer]:
+                    - /url: user?id=thunderbong
+                  - generic "2026-05-13T03:54:21 1778644461" [ref=e137]:
+                    - link "17 minutes ago" [ref=e138] [cursor=pointer]:
+                      - /url: item?id=48117604
+                  - text: "|"
+                  - link "hide" [ref=e139] [cursor=pointer]:
+                    - /url: hide?id=48117604&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e140] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=The%20Space%20Shuttle%20and%20the%20Horse%27s%20Rear%20End&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e141] [cursor=pointer]:
+                    - /url: item?id=48117604
+            - row [ref=e142]
+            - row "6. upvote Jupiter supercomputer breaks world record with 50-qubit quantum simulation (sciencedaily.com)" [ref=e143]:
+              - cell "6." [ref=e144]
+              - cell "upvote" [ref=e145]:
+                - link "upvote" [ref=e147] [cursor=pointer]:
+                  - /url: vote?id=48117602&how=up&goto=newest
+                  - generic "upvote" [ref=e148]
+              - cell "Jupiter supercomputer breaks world record with 50-qubit quantum simulation (sciencedaily.com)" [ref=e149]:
+                - generic [ref=e150]:
+                  - link "Jupiter supercomputer breaks world record with 50-qubit quantum simulation" [ref=e151] [cursor=pointer]:
+                    - /url: https://www.sciencedaily.com/releases/2026/05/260510234715.htm
+                  - generic [ref=e152]:
+                    - text: (
+                    - link "sciencedaily.com" [ref=e153] [cursor=pointer]:
+                      - /url: from?site=sciencedaily.com
+                    - text: )
+            - row "1 point by jldew93 17 minutes ago | hide | past | discuss" [ref=e154]:
+              - cell [ref=e155]
+              - cell "1 point by jldew93 17 minutes ago | hide | past | discuss" [ref=e156]:
+                - generic [ref=e157]:
+                  - text: 1 point by
+                  - link "jldew93" [ref=e158] [cursor=pointer]:
+                    - /url: user?id=jldew93
+                  - generic "2026-05-13T03:54:04 1778644444" [ref=e159]:
+                    - link "17 minutes ago" [ref=e160] [cursor=pointer]:
+                      - /url: item?id=48117602
+                  - text: "|"
+                  - link "hide" [ref=e161] [cursor=pointer]:
+                    - /url: hide?id=48117602&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e162] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Jupiter%20supercomputer%20breaks%20world%20record%20with%2050-qubit%20quantum%20simulation&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e163] [cursor=pointer]:
+                    - /url: item?id=48117602
+            - row [ref=e164]
+            - row "7. upvote SSHD Log Security Analysis - popular languages SDKs (github.com/melezhik)" [ref=e165]:
+              - cell "7." [ref=e166]
+              - cell "upvote" [ref=e167]:
+                - link "upvote" [ref=e169] [cursor=pointer]:
+                  - /url: vote?id=48117593&how=up&goto=newest
+                  - generic "upvote" [ref=e170]
+              - cell "SSHD Log Security Analysis - popular languages SDKs (github.com/melezhik)" [ref=e171]:
+                - generic [ref=e172]:
+                  - link "SSHD Log Security Analysis - popular languages SDKs" [ref=e173] [cursor=pointer]:
+                    - /url: https://github.com/melezhik/Sparrow6/blob/master/task.check
+                  - generic [ref=e174]:
+                    - text: (
+                    - link "github.com/melezhik" [ref=e175] [cursor=pointer]:
+                      - /url: from?site=github.com/melezhik
+                    - text: )
+            - row "1 point by melezhik 18 minutes ago | hide | past | 5 comments" [ref=e176]:
+              - cell [ref=e177]
+              - cell "1 point by melezhik 18 minutes ago | hide | past | 5 comments" [ref=e178]:
+                - generic [ref=e179]:
+                  - text: 1 point by
+                  - link "melezhik" [ref=e180] [cursor=pointer]:
+                    - /url: user?id=melezhik
+                  - generic "2026-05-13T03:53:07 1778644387" [ref=e181]:
+                    - link "18 minutes ago" [ref=e182] [cursor=pointer]:
+                      - /url: item?id=48117593
+                  - text: "|"
+                  - link "hide" [ref=e183] [cursor=pointer]:
+                    - /url: hide?id=48117593&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e184] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=SSHD%20Log%20Security%20Analysis%20-%20popular%20languages%20SDKs&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "5 comments" [ref=e185] [cursor=pointer]:
+                    - /url: item?id=48117593
+            - row [ref=e186]
+            - row "8. upvote Prompting Patterns (Groq Documentation) (groq.com)" [ref=e187]:
+              - cell "8." [ref=e188]
+              - cell "upvote" [ref=e189]:
+                - link "upvote" [ref=e191] [cursor=pointer]:
+                  - /url: vote?id=48117574&how=up&goto=newest
+                  - generic "upvote" [ref=e192]
+              - cell "Prompting Patterns (Groq Documentation) (groq.com)" [ref=e193]:
+                - generic [ref=e194]:
+                  - link "Prompting Patterns (Groq Documentation)" [ref=e195] [cursor=pointer]:
+                    - /url: https://console.groq.com/docs/prompting/patterns
+                  - generic [ref=e196]:
+                    - text: (
+                    - link "groq.com" [ref=e197] [cursor=pointer]:
+                      - /url: from?site=groq.com
+                    - text: )
+            - row "1 point by tacone 20 minutes ago | hide | past | discuss" [ref=e198]:
+              - cell [ref=e199]
+              - cell "1 point by tacone 20 minutes ago | hide | past | discuss" [ref=e200]:
+                - generic [ref=e201]:
+                  - text: 1 point by
+                  - link "tacone" [ref=e202] [cursor=pointer]:
+                    - /url: user?id=tacone
+                  - generic "2026-05-13T03:50:42 1778644242" [ref=e203]:
+                    - link "20 minutes ago" [ref=e204] [cursor=pointer]:
+                      - /url: item?id=48117574
+                  - text: "|"
+                  - link "hide" [ref=e205] [cursor=pointer]:
+                    - /url: hide?id=48117574&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e206] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Prompting%20Patterns%20%28Groq%20Documentation%29&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e207] [cursor=pointer]:
+                    - /url: item?id=48117574
+            - row [ref=e208]
+            - row "9. upvote AI was made for junk mail (junkmailmagic.com)" [ref=e209]:
+              - cell "9." [ref=e210]
+              - cell "upvote" [ref=e211]:
+                - link "upvote" [ref=e213] [cursor=pointer]:
+                  - /url: vote?id=48117549&how=up&goto=newest
+                  - generic "upvote" [ref=e214]
+              - cell "AI was made for junk mail (junkmailmagic.com)" [ref=e215]:
+                - generic [ref=e216]:
+                  - link "AI was made for junk mail" [ref=e217] [cursor=pointer]:
+                    - /url: https://junkmailmagic.com
+                  - generic [ref=e218]:
+                    - text: (
+                    - link "junkmailmagic.com" [ref=e219] [cursor=pointer]:
+                      - /url: from?site=junkmailmagic.com
+                    - text: )
+            - row "1 point by husky8 26 minutes ago | hide | past | discuss" [ref=e220]:
+              - cell [ref=e221]
+              - cell "1 point by husky8 26 minutes ago | hide | past | discuss" [ref=e222]:
+                - generic [ref=e223]:
+                  - text: 1 point by
+                  - link "husky8" [ref=e224] [cursor=pointer]:
+                    - /url: user?id=husky8
+                  - generic "2026-05-13T03:45:04 1778643904" [ref=e225]:
+                    - link "26 minutes ago" [ref=e226] [cursor=pointer]:
+                      - /url: item?id=48117549
+                  - text: "|"
+                  - link "hide" [ref=e227] [cursor=pointer]:
+                    - /url: hide?id=48117549&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e228] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=AI%20was%20made%20for%20junk%20mail&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e229] [cursor=pointer]:
+                    - /url: item?id=48117549
+            - row [ref=e230]
+            - row "10. upvote I got tired of realizing \"discounts\" weren't discounts (apps.apple.com)" [ref=e231]:
+              - cell "10." [ref=e232]
+              - cell "upvote" [ref=e233]:
+                - link "upvote" [ref=e235] [cursor=pointer]:
+                  - /url: vote?id=48117483&how=up&goto=newest
+                  - generic "upvote" [ref=e236]
+              - cell "I got tired of realizing \"discounts\" weren't discounts (apps.apple.com)" [ref=e237]:
+                - generic [ref=e238]:
+                  - link "I got tired of realizing \"discounts\" weren't discounts" [ref=e239] [cursor=pointer]:
+                    - /url: https://apps.apple.com/us/app/silicon-ai-price-comparison/id6764054291
+                  - generic [ref=e240]:
+                    - text: (
+                    - link "apps.apple.com" [ref=e241] [cursor=pointer]:
+                      - /url: from?site=apps.apple.com
+                    - text: )
+            - row "2 points by stayoneup 34 minutes ago | hide | past | discuss" [ref=e242]:
+              - cell [ref=e243]
+              - cell "2 points by stayoneup 34 minutes ago | hide | past | discuss" [ref=e244]:
+                - generic [ref=e245]:
+                  - text: 2 points by
+                  - link "stayoneup" [ref=e246] [cursor=pointer]:
+                    - /url: user?id=stayoneup
+                  - generic "2026-05-13T03:36:48 1778643408" [ref=e247]:
+                    - link "34 minutes ago" [ref=e248] [cursor=pointer]:
+                      - /url: item?id=48117483
+                  - text: "|"
+                  - link "hide" [ref=e249] [cursor=pointer]:
+                    - /url: hide?id=48117483&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e250] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=I%20got%20tired%20of%20realizing%20%22discounts%22%20weren%27t%20discounts&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e251] [cursor=pointer]:
+                    - /url: item?id=48117483
+            - row [ref=e252]
+            - 'row "11. upvote Show HN: SelfCertForge, manage root CAs and self-signed certs on macOS/Windows (github.com/rbonestell)" [ref=e253]':
+              - cell "11." [ref=e254]
+              - cell "upvote" [ref=e255]:
+                - link "upvote" [ref=e257] [cursor=pointer]:
+                  - /url: vote?id=48117476&how=up&goto=newest
+                  - generic "upvote" [ref=e258]
+              - 'cell "Show HN: SelfCertForge, manage root CAs and self-signed certs on macOS/Windows (github.com/rbonestell)" [ref=e259]':
+                - generic [ref=e260]:
+                  - 'link "Show HN: SelfCertForge, manage root CAs and self-signed certs on macOS/Windows" [ref=e261] [cursor=pointer]':
+                    - /url: https://github.com/rbonestell/SelfCertForge
+                  - generic [ref=e262]:
+                    - text: (
+                    - link "github.com/rbonestell" [ref=e263] [cursor=pointer]:
+                      - /url: from?site=github.com/rbonestell
+                    - text: )
+            - row "2 points by rbonestell 35 minutes ago | hide | past | discuss" [ref=e264]:
+              - cell [ref=e265]
+              - cell "2 points by rbonestell 35 minutes ago | hide | past | discuss" [ref=e266]:
+                - generic [ref=e267]:
+                  - text: 2 points by
+                  - link "rbonestell" [ref=e268] [cursor=pointer]:
+                    - /url: user?id=rbonestell
+                  - generic "2026-05-13T03:35:57 1778643357" [ref=e269]:
+                    - link "35 minutes ago" [ref=e270] [cursor=pointer]:
+                      - /url: item?id=48117476
+                  - text: "|"
+                  - link "hide" [ref=e271] [cursor=pointer]:
+                    - /url: hide?id=48117476&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e272] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Show%20HN%3A%20SelfCertForge%2C%20manage%20root%20CAs%20and%20self-signed%20certs%20on%20macOS%2FWindows&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e273] [cursor=pointer]:
+                    - /url: item?id=48117476
+            - row [ref=e274]
+            - row "12. upvote I vibecoded a game and got my first paying supporter (gunguesser.com)" [ref=e275]:
+              - cell "12." [ref=e276]
+              - cell "upvote" [ref=e277]:
+                - link "upvote" [ref=e279] [cursor=pointer]:
+                  - /url: vote?id=48117428&how=up&goto=newest
+                  - generic "upvote" [ref=e280]
+              - cell "I vibecoded a game and got my first paying supporter (gunguesser.com)" [ref=e281]:
+                - generic [ref=e282]:
+                  - link "I vibecoded a game and got my first paying supporter" [ref=e283] [cursor=pointer]:
+                    - /url: https://gunguesser.com
+                  - generic [ref=e284]:
+                    - text: (
+                    - link "gunguesser.com" [ref=e285] [cursor=pointer]:
+                      - /url: from?site=gunguesser.com
+                    - text: )
+            - row "1 point by salad_v 43 minutes ago | hide | past | 1 comment" [ref=e286]:
+              - cell [ref=e287]
+              - cell "1 point by salad_v 43 minutes ago | hide | past | 1 comment" [ref=e288]:
+                - generic [ref=e289]:
+                  - text: 1 point by
+                  - link "salad_v" [ref=e290] [cursor=pointer]:
+                    - /url: user?id=salad_v
+                  - generic "2026-05-13T03:28:25 1778642905" [ref=e291]:
+                    - link "43 minutes ago" [ref=e292] [cursor=pointer]:
+                      - /url: item?id=48117428
+                  - text: "|"
+                  - link "hide" [ref=e293] [cursor=pointer]:
+                    - /url: hide?id=48117428&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e294] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=I%20vibecoded%20a%20game%20and%20got%20my%20first%20paying%20supporter&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "1 comment" [ref=e295] [cursor=pointer]:
+                    - /url: item?id=48117428
+            - row [ref=e296]
+            - 'row "13. upvote xkcd: Well 2 (xkcd.com)" [ref=e297]':
+              - cell "13." [ref=e298]
+              - cell "upvote" [ref=e299]:
+                - link "upvote" [ref=e301] [cursor=pointer]:
+                  - /url: vote?id=48117372&how=up&goto=newest
+                  - generic "upvote" [ref=e302]
+              - 'cell "xkcd: Well 2 (xkcd.com)" [ref=e303]':
+                - generic [ref=e304]:
+                  - 'link "xkcd: Well 2" [ref=e305] [cursor=pointer]':
+                    - /url: https://xkcd.com/568/
+                  - generic [ref=e306]:
+                    - text: (
+                    - link "xkcd.com" [ref=e307] [cursor=pointer]:
+                      - /url: from?site=xkcd.com
+                    - text: )
+            - row "2 points by ulrikrasmussen 54 minutes ago | hide | past | discuss" [ref=e308]:
+              - cell [ref=e309]
+              - cell "2 points by ulrikrasmussen 54 minutes ago | hide | past | discuss" [ref=e310]:
+                - generic [ref=e311]:
+                  - text: 2 points by
+                  - link "ulrikrasmussen" [ref=e312] [cursor=pointer]:
+                    - /url: user?id=ulrikrasmussen
+                  - generic "2026-05-13T03:16:47 1778642207" [ref=e313]:
+                    - link "54 minutes ago" [ref=e314] [cursor=pointer]:
+                      - /url: item?id=48117372
+                  - text: "|"
+                  - link "hide" [ref=e315] [cursor=pointer]:
+                    - /url: hide?id=48117372&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e316] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=xkcd%3A%20Well%202&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e317] [cursor=pointer]:
+                    - /url: item?id=48117372
+            - row [ref=e318]
+            - 'row "14. upvote Solving Brain Aging: Fast and Slow (amaranth.foundation)" [ref=e319]':
+              - cell "14." [ref=e320]
+              - cell "upvote" [ref=e321]:
+                - link "upvote" [ref=e323] [cursor=pointer]:
+                  - /url: vote?id=48117328&how=up&goto=newest
+                  - generic "upvote" [ref=e324]
+              - 'cell "Solving Brain Aging: Fast and Slow (amaranth.foundation)" [ref=e325]':
+                - generic [ref=e326]:
+                  - 'link "Solving Brain Aging: Fast and Slow" [ref=e327] [cursor=pointer]':
+                    - /url: https://blog.amaranth.foundation/p/solving-brain-aging-fast-and-slow
+                  - generic [ref=e328]:
+                    - text: (
+                    - link "amaranth.foundation" [ref=e329] [cursor=pointer]:
+                      - /url: from?site=amaranth.foundation
+                    - text: )
+            - row "2 points by pminimax 1 hour ago | hide | past | discuss" [ref=e330]:
+              - cell [ref=e331]
+              - cell "2 points by pminimax 1 hour ago | hide | past | discuss" [ref=e332]:
+                - generic [ref=e333]:
+                  - text: 2 points by
+                  - link "pminimax" [ref=e334] [cursor=pointer]:
+                    - /url: user?id=pminimax
+                  - generic "2026-05-13T03:05:44 1778641544" [ref=e335]:
+                    - link "1 hour ago" [ref=e336] [cursor=pointer]:
+                      - /url: item?id=48117328
+                  - text: "|"
+                  - link "hide" [ref=e337] [cursor=pointer]:
+                    - /url: hide?id=48117328&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e338] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Solving%20Brain%20Aging%3A%20Fast%20and%20Slow&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e339] [cursor=pointer]:
+                    - /url: item?id=48117328
+            - row [ref=e340]
+            - row "15. upvote Fear of layoffs what should I do?" [ref=e341]:
+              - cell "15." [ref=e342]
+              - cell "upvote" [ref=e343]:
+                - link "upvote" [ref=e345] [cursor=pointer]:
+                  - /url: vote?id=48117316&how=up&goto=newest
+                  - generic "upvote" [ref=e346]
+              - cell "Fear of layoffs what should I do?" [ref=e347]:
+                - link "Fear of layoffs what should I do?" [ref=e349] [cursor=pointer]:
+                  - /url: item?id=48117316
+            - row "3 points by cipherdc 1 hour ago | hide | past | discuss" [ref=e350]:
+              - cell [ref=e351]
+              - cell "3 points by cipherdc 1 hour ago | hide | past | discuss" [ref=e352]:
+                - generic [ref=e353]:
+                  - text: 3 points by
+                  - link "cipherdc" [ref=e354] [cursor=pointer]:
+                    - /url: user?id=cipherdc
+                  - generic "2026-05-13T03:03:15 1778641395" [ref=e355]:
+                    - link "1 hour ago" [ref=e356] [cursor=pointer]:
+                      - /url: item?id=48117316
+                  - text: "|"
+                  - link "hide" [ref=e357] [cursor=pointer]:
+                    - /url: hide?id=48117316&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e358] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Fear%20of%20layoffs%20what%20should%20I%20do%3F&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e359] [cursor=pointer]:
+                    - /url: item?id=48117316
+            - row [ref=e360]
+            - row "16. upvote 'Googlebooks' have a premium focus, some Chromebooks can be upgraded (9to5google.com)" [ref=e361]:
+              - cell "16." [ref=e362]
+              - cell "upvote" [ref=e363]:
+                - link "upvote" [ref=e365] [cursor=pointer]:
+                  - /url: vote?id=48117296&how=up&goto=newest
+                  - generic "upvote" [ref=e366]
+              - cell "'Googlebooks' have a premium focus, some Chromebooks can be upgraded (9to5google.com)" [ref=e367]:
+                - generic [ref=e368]:
+                  - link "'Googlebooks' have a premium focus, some Chromebooks can be upgraded" [ref=e369] [cursor=pointer]:
+                    - /url: https://9to5google.com/2026/05/12/googlebooks-have-a-premium-focus-some-chromebooks-can-be-upgraded/
+                  - generic [ref=e370]:
+                    - text: (
+                    - link "9to5google.com" [ref=e371] [cursor=pointer]:
+                      - /url: from?site=9to5google.com
+                    - text: )
+            - row "1 point by theanonymousone 1 hour ago | hide | past | discuss" [ref=e372]:
+              - cell [ref=e373]
+              - cell "1 point by theanonymousone 1 hour ago | hide | past | discuss" [ref=e374]:
+                - generic [ref=e375]:
+                  - text: 1 point by
+                  - link "theanonymousone" [ref=e376] [cursor=pointer]:
+                    - /url: user?id=theanonymousone
+                  - generic "2026-05-13T02:59:03 1778641143" [ref=e377]:
+                    - link "1 hour ago" [ref=e378] [cursor=pointer]:
+                      - /url: item?id=48117296
+                  - text: "|"
+                  - link "hide" [ref=e379] [cursor=pointer]:
+                    - /url: hide?id=48117296&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e380] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=%27Googlebooks%27%20have%20a%20premium%20focus%2C%20some%20Chromebooks%20can%20be%20upgraded&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e381] [cursor=pointer]:
+                    - /url: item?id=48117296
+            - row [ref=e382]
+            - row "17. upvote NPM-Scan – Detects TanStack Worm, Beats Socket/Snyk (Local/BYOC) (github.com/lateos-ai)" [ref=e383]:
+              - cell "17." [ref=e384]
+              - cell "upvote" [ref=e385]:
+                - link "upvote" [ref=e387] [cursor=pointer]:
+                  - /url: vote?id=48117280&how=up&goto=newest
+                  - generic "upvote" [ref=e388]
+              - cell "NPM-Scan – Detects TanStack Worm, Beats Socket/Snyk (Local/BYOC) (github.com/lateos-ai)" [ref=e389]:
+                - generic [ref=e390]:
+                  - link "NPM-Scan – Detects TanStack Worm, Beats Socket/Snyk (Local/BYOC)" [ref=e391] [cursor=pointer]:
+                    - /url: https://github.com/lateos-ai/npm-scan
+                  - generic [ref=e392]:
+                    - text: (
+                    - link "github.com/lateos-ai" [ref=e393] [cursor=pointer]:
+                      - /url: from?site=github.com/lateos-ai
+                    - text: )
+            - row "1 point by lateos-ai 1 hour ago | hide | past | discuss" [ref=e394]:
+              - cell [ref=e395]
+              - cell "1 point by lateos-ai 1 hour ago | hide | past | discuss" [ref=e396]:
+                - generic [ref=e397]:
+                  - text: 1 point by
+                  - link "lateos-ai" [ref=e398] [cursor=pointer]:
+                    - /url: user?id=lateos-ai
+                  - generic "2026-05-13T02:56:41 1778641001" [ref=e399]:
+                    - link "1 hour ago" [ref=e400] [cursor=pointer]:
+                      - /url: item?id=48117280
+                  - text: "|"
+                  - link "hide" [ref=e401] [cursor=pointer]:
+                    - /url: hide?id=48117280&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e402] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=NPM-Scan%20%E2%80%93%20Detects%20TanStack%20Worm%2C%20Beats%20Socket%2FSnyk%20%28Local%2FBYOC%29&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e403] [cursor=pointer]:
+                    - /url: item?id=48117280
+            - row [ref=e404]
+            - row "18. upvote eBay rejects $56B GameStop bid as 'neither credible nor attractive' (ft.com)" [ref=e405]:
+              - cell "18." [ref=e406]
+              - cell "upvote" [ref=e407]:
+                - link "upvote" [ref=e409] [cursor=pointer]:
+                  - /url: vote?id=48117261&how=up&goto=newest
+                  - generic "upvote" [ref=e410]
+              - cell "eBay rejects $56B GameStop bid as 'neither credible nor attractive' (ft.com)" [ref=e411]:
+                - generic [ref=e412]:
+                  - link "eBay rejects $56B GameStop bid as 'neither credible nor attractive'" [ref=e413] [cursor=pointer]:
+                    - /url: https://www.ft.com/content/554f76a6-218d-4f88-bcad-9c52623ef533
+                  - generic [ref=e414]:
+                    - text: (
+                    - link "ft.com" [ref=e415] [cursor=pointer]:
+                      - /url: from?site=ft.com
+                    - text: )
+            - row "1 point by petethomas 1 hour ago | hide | past | discuss" [ref=e416]:
+              - cell [ref=e417]
+              - cell "1 point by petethomas 1 hour ago | hide | past | discuss" [ref=e418]:
+                - generic [ref=e419]:
+                  - text: 1 point by
+                  - link "petethomas" [ref=e420] [cursor=pointer]:
+                    - /url: user?id=petethomas
+                  - generic "2026-05-13T02:52:21 1778640741" [ref=e421]:
+                    - link "1 hour ago" [ref=e422] [cursor=pointer]:
+                      - /url: item?id=48117261
+                  - text: "|"
+                  - link "hide" [ref=e423] [cursor=pointer]:
+                    - /url: hide?id=48117261&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e424] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=eBay%20rejects%20%2456B%20GameStop%20bid%20as%20%27neither%20credible%20nor%20attractive%27&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e425] [cursor=pointer]:
+                    - /url: item?id=48117261
+            - row [ref=e426]
+            - 'row "19. upvote The identity join problem: Linking SSO profiles to directory users (workos.com)" [ref=e427]':
+              - cell "19." [ref=e428]
+              - cell "upvote" [ref=e429]:
+                - link "upvote" [ref=e431] [cursor=pointer]:
+                  - /url: vote?id=48117235&how=up&goto=newest
+                  - generic "upvote" [ref=e432]
+              - 'cell "The identity join problem: Linking SSO profiles to directory users (workos.com)" [ref=e433]':
+                - generic [ref=e434]:
+                  - 'link "The identity join problem: Linking SSO profiles to directory users" [ref=e435] [cursor=pointer]':
+                    - /url: https://workos.com/blog/linking-sso-profiles-to-directory-users
+                  - generic [ref=e436]:
+                    - text: (
+                    - link "workos.com" [ref=e437] [cursor=pointer]:
+                      - /url: from?site=workos.com
+                    - text: )
+            - row "2 points by jamilbk 1 hour ago | hide | past | discuss" [ref=e438]:
+              - cell [ref=e439]
+              - cell "2 points by jamilbk 1 hour ago | hide | past | discuss" [ref=e440]:
+                - generic [ref=e441]:
+                  - text: 2 points by
+                  - link "jamilbk" [ref=e442] [cursor=pointer]:
+                    - /url: user?id=jamilbk
+                  - generic "2026-05-13T02:47:28 1778640448" [ref=e443]:
+                    - link "1 hour ago" [ref=e444] [cursor=pointer]:
+                      - /url: item?id=48117235
+                  - text: "|"
+                  - link "hide" [ref=e445] [cursor=pointer]:
+                    - /url: hide?id=48117235&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e446] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=The%20identity%20join%20problem%3A%20Linking%20SSO%20profiles%20to%20directory%20users&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e447] [cursor=pointer]:
+                    - /url: item?id=48117235
+            - row [ref=e448]
+            - 'row "20. upvote Let''s Encrypt: Gen Y Cross-Certified Subordinate CAs Missing ServerAuth EKU (bugzilla.mozilla.org)" [ref=e449]':
+              - cell "20." [ref=e450]
+              - cell "upvote" [ref=e451]:
+                - link "upvote" [ref=e453] [cursor=pointer]:
+                  - /url: vote?id=48117202&how=up&goto=newest
+                  - generic "upvote" [ref=e454]
+              - 'cell "Let''s Encrypt: Gen Y Cross-Certified Subordinate CAs Missing ServerAuth EKU (bugzilla.mozilla.org)" [ref=e455]':
+                - generic [ref=e456]:
+                  - 'link "Let''s Encrypt: Gen Y Cross-Certified Subordinate CAs Missing ServerAuth EKU" [ref=e457] [cursor=pointer]':
+                    - /url: https://bugzilla.mozilla.org/show_bug.cgi?id=2038351
+                  - generic [ref=e458]:
+                    - text: (
+                    - link "bugzilla.mozilla.org" [ref=e459] [cursor=pointer]:
+                      - /url: from?site=bugzilla.mozilla.org
+                    - text: )
+            - row "4 points by XYen0n 1 hour ago | hide | past | discuss" [ref=e460]:
+              - cell [ref=e461]
+              - cell "4 points by XYen0n 1 hour ago | hide | past | discuss" [ref=e462]:
+                - generic [ref=e463]:
+                  - text: 4 points by
+                  - link "XYen0n" [ref=e464] [cursor=pointer]:
+                    - /url: user?id=XYen0n
+                  - generic "2026-05-13T02:42:22 1778640142" [ref=e465]:
+                    - link "1 hour ago" [ref=e466] [cursor=pointer]:
+                      - /url: item?id=48117202
+                  - text: "|"
+                  - link "hide" [ref=e467] [cursor=pointer]:
+                    - /url: hide?id=48117202&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e468] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Let%27s%20Encrypt%3A%20Gen%20Y%20Cross-Certified%20Subordinate%20CAs%20Missing%20ServerAuth%20EKU&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e469] [cursor=pointer]:
+                    - /url: item?id=48117202
+            - row [ref=e470]
+            - 'row "21. upvote Ask HN: Freelance Billing in the Age of LLMs?" [ref=e471]':
+              - cell "21." [ref=e472]
+              - cell "upvote" [ref=e473]:
+                - link "upvote" [ref=e475] [cursor=pointer]:
+                  - /url: vote?id=48117191&how=up&goto=newest
+                  - generic "upvote" [ref=e476]
+              - 'cell "Ask HN: Freelance Billing in the Age of LLMs?" [ref=e477]':
+                - 'link "Ask HN: Freelance Billing in the Age of LLMs?" [ref=e479] [cursor=pointer]':
+                  - /url: item?id=48117191
+            - row "3 points by meter 1 hour ago | hide | past | discuss" [ref=e480]:
+              - cell [ref=e481]
+              - cell "3 points by meter 1 hour ago | hide | past | discuss" [ref=e482]:
+                - generic [ref=e483]:
+                  - text: 3 points by
+                  - link "meter" [ref=e484] [cursor=pointer]:
+                    - /url: user?id=meter
+                  - generic "2026-05-13T02:39:07 1778639947" [ref=e485]:
+                    - link "1 hour ago" [ref=e486] [cursor=pointer]:
+                      - /url: item?id=48117191
+                  - text: "|"
+                  - link "hide" [ref=e487] [cursor=pointer]:
+                    - /url: hide?id=48117191&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e488] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Ask%20HN%3A%20Freelance%20Billing%20in%20the%20Age%20of%20LLMs%3F&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e489] [cursor=pointer]:
+                    - /url: item?id=48117191
+            - row [ref=e490]
+            - row "22. upvote Temu is advertising filet mignon on X (twitter.com/shoptemu)" [ref=e491]:
+              - cell "22." [ref=e492]
+              - cell "upvote" [ref=e493]:
+                - link "upvote" [ref=e495] [cursor=pointer]:
+                  - /url: vote?id=48117190&how=up&goto=newest
+                  - generic "upvote" [ref=e496]
+              - cell "Temu is advertising filet mignon on X (twitter.com/shoptemu)" [ref=e497]:
+                - generic [ref=e498]:
+                  - link "Temu is advertising filet mignon on X" [ref=e499] [cursor=pointer]:
+                    - /url: https://twitter.com/shoptemu/status/2053092200632685016
+                  - generic [ref=e500]:
+                    - text: (
+                    - link "twitter.com/shoptemu" [ref=e501] [cursor=pointer]:
+                      - /url: from?site=twitter.com/shoptemu
+                    - text: )
+            - row "45 points by noleary 1 hour ago | hide | past | 8 comments" [ref=e502]:
+              - cell [ref=e503]
+              - cell "45 points by noleary 1 hour ago | hide | past | 8 comments" [ref=e504]:
+                - generic [ref=e505]:
+                  - text: 45 points by
+                  - link "noleary" [ref=e506] [cursor=pointer]:
+                    - /url: user?id=noleary
+                  - generic "2026-05-13T02:39:04 1778639944" [ref=e507]:
+                    - link "1 hour ago" [ref=e508] [cursor=pointer]:
+                      - /url: item?id=48117190
+                  - text: "|"
+                  - link "hide" [ref=e509] [cursor=pointer]:
+                    - /url: hide?id=48117190&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e510] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Temu%20is%20advertising%20filet%20mignon%20on%20X&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "8 comments" [ref=e511] [cursor=pointer]:
+                    - /url: item?id=48117190
+            - row [ref=e512]
+            - row "23. upvote Rectangle Shopping (Almost Anything) (rectangle.so)" [ref=e513]:
+              - cell "23." [ref=e514]
+              - cell "upvote" [ref=e515]:
+                - link "upvote" [ref=e517] [cursor=pointer]:
+                  - /url: vote?id=48117184&how=up&goto=newest
+                  - generic "upvote" [ref=e518]
+              - cell "Rectangle Shopping (Almost Anything) (rectangle.so)" [ref=e519]:
+                - generic [ref=e520]:
+                  - link "Rectangle Shopping (Almost Anything)" [ref=e521] [cursor=pointer]:
+                    - /url: https://www.rectangle.so
+                  - generic [ref=e522]:
+                    - text: (
+                    - link "rectangle.so" [ref=e523] [cursor=pointer]:
+                      - /url: from?site=rectangle.so
+                    - text: )
+            - row "1 point by Waseemkhalo 1 hour ago | hide | past | 1 comment" [ref=e524]:
+              - cell [ref=e525]
+              - cell "1 point by Waseemkhalo 1 hour ago | hide | past | 1 comment" [ref=e526]:
+                - generic [ref=e527]:
+                  - text: 1 point by
+                  - link "Waseemkhalo" [ref=e528] [cursor=pointer]:
+                    - /url: user?id=Waseemkhalo
+                  - generic "2026-05-13T02:38:22 1778639902" [ref=e529]:
+                    - link "1 hour ago" [ref=e530] [cursor=pointer]:
+                      - /url: item?id=48117184
+                  - text: "|"
+                  - link "hide" [ref=e531] [cursor=pointer]:
+                    - /url: hide?id=48117184&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e532] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Rectangle%20Shopping%20%28Almost%20Anything%29&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "1 comment" [ref=e533] [cursor=pointer]:
+                    - /url: item?id=48117184
+            - row [ref=e534]
+            - row "24. upvote Cemu (WiiU emulator) compromised by Russian threat actor (rentry.co)" [ref=e535]:
+              - cell "24." [ref=e536]
+              - cell "upvote" [ref=e537]:
+                - link "upvote" [ref=e539] [cursor=pointer]:
+                  - /url: vote?id=48117154&how=up&goto=newest
+                  - generic "upvote" [ref=e540]
+              - cell "Cemu (WiiU emulator) compromised by Russian threat actor (rentry.co)" [ref=e541]:
+                - generic [ref=e542]:
+                  - link "Cemu (WiiU emulator) compromised by Russian threat actor" [ref=e543] [cursor=pointer]:
+                    - /url: https://rentry.co/cemu-security-psa
+                  - generic [ref=e544]:
+                    - text: (
+                    - link "rentry.co" [ref=e545] [cursor=pointer]:
+                      - /url: from?site=rentry.co
+                    - text: )
+            - row "4 points by gassi 1 hour ago | hide | past | discuss" [ref=e546]:
+              - cell [ref=e547]
+              - cell "4 points by gassi 1 hour ago | hide | past | discuss" [ref=e548]:
+                - generic [ref=e549]:
+                  - text: 4 points by
+                  - link "gassi" [ref=e550] [cursor=pointer]:
+                    - /url: user?id=gassi
+                  - generic "2026-05-13T02:34:10 1778639650" [ref=e551]:
+                    - link "1 hour ago" [ref=e552] [cursor=pointer]:
+                      - /url: item?id=48117154
+                  - text: "|"
+                  - link "hide" [ref=e553] [cursor=pointer]:
+                    - /url: hide?id=48117154&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e554] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Cemu%20%28WiiU%20emulator%29%20compromised%20by%20Russian%20threat%20actor&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e555] [cursor=pointer]:
+                    - /url: item?id=48117154
+            - row [ref=e556]
+            - row "25. upvote Claude for Legal Launches (artificiallawyer.com)" [ref=e557]:
+              - cell "25." [ref=e558]
+              - cell "upvote" [ref=e559]:
+                - link "upvote" [ref=e561] [cursor=pointer]:
+                  - /url: vote?id=48117129&how=up&goto=newest
+                  - generic "upvote" [ref=e562]
+              - cell "Claude for Legal Launches (artificiallawyer.com)" [ref=e563]:
+                - generic [ref=e564]:
+                  - link "Claude for Legal Launches" [ref=e565] [cursor=pointer]:
+                    - /url: https://www.artificiallawyer.com/2026/05/12/claude-for-legal-launches-may-reshape-the-legal-tech-world/
+                  - generic [ref=e566]:
+                    - text: (
+                    - link "artificiallawyer.com" [ref=e567] [cursor=pointer]:
+                      - /url: from?site=artificiallawyer.com
+                    - text: )
+            - row "1 point by msolujic 1 hour ago | hide | past | discuss" [ref=e568]:
+              - cell [ref=e569]
+              - cell "1 point by msolujic 1 hour ago | hide | past | discuss" [ref=e570]:
+                - generic [ref=e571]:
+                  - text: 1 point by
+                  - link "msolujic" [ref=e572] [cursor=pointer]:
+                    - /url: user?id=msolujic
+                  - generic "2026-05-13T02:28:43 1778639323" [ref=e573]:
+                    - link "1 hour ago" [ref=e574] [cursor=pointer]:
+                      - /url: item?id=48117129
+                  - text: "|"
+                  - link "hide" [ref=e575] [cursor=pointer]:
+                    - /url: hide?id=48117129&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e576] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Claude%20for%20Legal%20Launches&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e577] [cursor=pointer]:
+                    - /url: item?id=48117129
+            - row [ref=e578]
+            - 'row "26. upvote [PATCH linux] README: Don''t organize the README by arbitrary \"roles\" (kernel.org)" [ref=e579]':
+              - cell "26." [ref=e580]
+              - cell "upvote" [ref=e581]:
+                - link "upvote" [ref=e583] [cursor=pointer]:
+                  - /url: vote?id=48117124&how=up&goto=newest
+                  - generic "upvote" [ref=e584]
+              - 'cell "[PATCH linux] README: Don''t organize the README by arbitrary \"roles\" (kernel.org)" [ref=e585]':
+                - generic [ref=e586]:
+                  - 'link "[PATCH linux] README: Don''t organize the README by arbitrary \"roles\"" [ref=e587] [cursor=pointer]':
+                    - /url: https://lore.kernel.org/lkml/20260513004616.2877-1-me@runxiyu.org/T/#u
+                  - generic [ref=e588]:
+                    - text: (
+                    - link "kernel.org" [ref=e589] [cursor=pointer]:
+                      - /url: from?site=kernel.org
+                    - text: )
+            - row "1 point by runxiyu 1 hour ago | hide | past | discuss" [ref=e590]:
+              - cell [ref=e591]
+              - cell "1 point by runxiyu 1 hour ago | hide | past | discuss" [ref=e592]:
+                - generic [ref=e593]:
+                  - text: 1 point by
+                  - link "runxiyu" [ref=e594] [cursor=pointer]:
+                    - /url: user?id=runxiyu
+                  - generic "2026-05-13T02:28:05 1778639285" [ref=e595]:
+                    - link "1 hour ago" [ref=e596] [cursor=pointer]:
+                      - /url: item?id=48117124
+                  - text: "|"
+                  - link "hide" [ref=e597] [cursor=pointer]:
+                    - /url: hide?id=48117124&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e598] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=%5BPATCH%20linux%5D%20README%3A%20Don%27t%20organize%20the%20README%20by%20arbitrary%20%22roles%22&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e599] [cursor=pointer]:
+                    - /url: item?id=48117124
+            - row [ref=e600]
+            - row "27. upvote Self-hosted AI memory with web dashboard – Cloudflare Workers, D1, Vectorize (github.com/rahilp)" [ref=e601]:
+              - cell "27." [ref=e602]
+              - cell "upvote" [ref=e603]:
+                - link "upvote" [ref=e605] [cursor=pointer]:
+                  - /url: vote?id=48117112&how=up&goto=newest
+                  - generic "upvote" [ref=e606]
+              - cell "Self-hosted AI memory with web dashboard – Cloudflare Workers, D1, Vectorize (github.com/rahilp)" [ref=e607]:
+                - generic [ref=e608]:
+                  - link "Self-hosted AI memory with web dashboard – Cloudflare Workers, D1, Vectorize" [ref=e609] [cursor=pointer]:
+                    - /url: https://github.com/rahilp/second-brain-cloudflare
+                  - generic [ref=e610]:
+                    - text: (
+                    - link "github.com/rahilp" [ref=e611] [cursor=pointer]:
+                      - /url: from?site=github.com/rahilp
+                    - text: )
+            - row "1 point by rahilpirani 1 hour ago | hide | past | discuss" [ref=e612]:
+              - cell [ref=e613]
+              - cell "1 point by rahilpirani 1 hour ago | hide | past | discuss" [ref=e614]:
+                - generic [ref=e615]:
+                  - text: 1 point by
+                  - link "rahilpirani" [ref=e616] [cursor=pointer]:
+                    - /url: user?id=rahilpirani
+                  - generic "2026-05-13T02:26:15 1778639175" [ref=e617]:
+                    - link "1 hour ago" [ref=e618] [cursor=pointer]:
+                      - /url: item?id=48117112
+                  - text: "|"
+                  - link "hide" [ref=e619] [cursor=pointer]:
+                    - /url: hide?id=48117112&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e620] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Self-hosted%20AI%20memory%20with%20web%20dashboard%20%E2%80%93%20Cloudflare%20Workers%2C%20D1%2C%20Vectorize&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e621] [cursor=pointer]:
+                    - /url: item?id=48117112
+            - row [ref=e622]
+            - row "28. upvote Diversity and functional profile of the \"microbial proteome\" in fermented foods (rsc.org)" [ref=e623]:
+              - cell "28." [ref=e624]
+              - cell "upvote" [ref=e625]:
+                - link "upvote" [ref=e627] [cursor=pointer]:
+                  - /url: vote?id=48117094&how=up&goto=newest
+                  - generic "upvote" [ref=e628]
+              - cell "Diversity and functional profile of the \"microbial proteome\" in fermented foods (rsc.org)" [ref=e629]:
+                - generic [ref=e630]:
+                  - link "Diversity and functional profile of the \"microbial proteome\" in fermented foods" [ref=e631] [cursor=pointer]:
+                    - /url: https://pubs.rsc.org/en/content/articlelanding/2026/fo/d5fo05039a
+                  - generic [ref=e632]:
+                    - text: (
+                    - link "rsc.org" [ref=e633] [cursor=pointer]:
+                      - /url: from?site=rsc.org
+                    - text: )
+            - row "2 points by PaulHoule 1 hour ago | hide | past | discuss" [ref=e634]:
+              - cell [ref=e635]
+              - cell "2 points by PaulHoule 1 hour ago | hide | past | discuss" [ref=e636]:
+                - generic [ref=e637]:
+                  - text: 2 points by
+                  - link "PaulHoule" [ref=e638] [cursor=pointer]:
+                    - /url: user?id=PaulHoule
+                  - generic "2026-05-13T02:22:33 1778638953" [ref=e639]:
+                    - link "1 hour ago" [ref=e640] [cursor=pointer]:
+                      - /url: item?id=48117094
+                  - text: "|"
+                  - link "hide" [ref=e641] [cursor=pointer]:
+                    - /url: hide?id=48117094&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e642] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Diversity%20and%20functional%20profile%20of%20the%20%22microbial%20proteome%22%20in%20fermented%20foods&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e643] [cursor=pointer]:
+                    - /url: item?id=48117094
+            - row [ref=e644]
+            - row "29. upvote BYOM stock analysis via MCP, looking for feedback (lynxdi.com)" [ref=e645]:
+              - cell "29." [ref=e646]
+              - cell "upvote" [ref=e647]:
+                - link "upvote" [ref=e649] [cursor=pointer]:
+                  - /url: vote?id=48117081&how=up&goto=newest
+                  - generic "upvote" [ref=e650]
+              - cell "BYOM stock analysis via MCP, looking for feedback (lynxdi.com)" [ref=e651]:
+                - generic [ref=e652]:
+                  - link "BYOM stock analysis via MCP, looking for feedback" [ref=e653] [cursor=pointer]:
+                    - /url: https://stocks.lynxdi.com/
+                  - generic [ref=e654]:
+                    - text: (
+                    - link "lynxdi.com" [ref=e655] [cursor=pointer]:
+                      - /url: from?site=lynxdi.com
+                    - text: )
+            - row "2 points by pezhao 1 hour ago | hide | past | discuss" [ref=e656]:
+              - cell [ref=e657]
+              - cell "2 points by pezhao 1 hour ago | hide | past | discuss" [ref=e658]:
+                - generic [ref=e659]:
+                  - text: 2 points by
+                  - link "pezhao" [ref=e660] [cursor=pointer]:
+                    - /url: user?id=pezhao
+                  - generic "2026-05-13T02:21:00 1778638860" [ref=e661]:
+                    - link "1 hour ago" [ref=e662] [cursor=pointer]:
+                      - /url: item?id=48117081
+                  - text: "|"
+                  - link "hide" [ref=e663] [cursor=pointer]:
+                    - /url: hide?id=48117081&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e664] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=BYOM%20stock%20analysis%20via%20MCP%2C%20looking%20for%20feedback&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e665] [cursor=pointer]:
+                    - /url: item?id=48117081
+            - row [ref=e666]
+            - 'row "30. upvote Show HN: I spent $100 in Claude tokens and 1k battles training my AI tank (agentank.ai)" [ref=e667]':
+              - cell "30." [ref=e668]
+              - cell "upvote" [ref=e669]:
+                - link "upvote" [ref=e671] [cursor=pointer]:
+                  - /url: vote?id=48117078&how=up&goto=newest
+                  - generic "upvote" [ref=e672]
+              - 'cell "Show HN: I spent $100 in Claude tokens and 1k battles training my AI tank (agentank.ai)" [ref=e673]':
+                - generic [ref=e674]:
+                  - 'link "Show HN: I spent $100 in Claude tokens and 1k battles training my AI tank" [ref=e675] [cursor=pointer]':
+                    - /url: https://agentank.ai/history/mat_8v9fSEZE8295dcZ8U
+                  - generic [ref=e676]:
+                    - text: (
+                    - link "agentank.ai" [ref=e677] [cursor=pointer]:
+                      - /url: from?site=agentank.ai
+                    - text: )
+            - row "2 points by mazzystar 1 hour ago | hide | past | discuss" [ref=e678]:
+              - cell [ref=e679]
+              - cell "2 points by mazzystar 1 hour ago | hide | past | discuss" [ref=e680]:
+                - generic [ref=e681]:
+                  - text: 2 points by
+                  - link "mazzystar" [ref=e682] [cursor=pointer]:
+                    - /url: user?id=mazzystar
+                  - generic "2026-05-13T02:20:44 1778638844" [ref=e683]:
+                    - link "1 hour ago" [ref=e684] [cursor=pointer]:
+                      - /url: item?id=48117078
+                  - text: "|"
+                  - link "hide" [ref=e685] [cursor=pointer]:
+                    - /url: hide?id=48117078&goto=newest
+                  - text: "|"
+                  - link "past" [ref=e686] [cursor=pointer]:
+                    - /url: https://hn.algolia.com/?query=Show%20HN%3A%20I%20spent%20%24100%20in%20Claude%20tokens%20and%201k%20battles%20training%20my%20AI%20tank&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0
+                  - text: "|"
+                  - link "discuss" [ref=e687] [cursor=pointer]:
+                    - /url: item?id=48117078
+            - row [ref=e688]
+            - row [ref=e689]
+            - row "More" [ref=e690]:
+              - cell [ref=e691]
+              - cell "More" [ref=e692]:
+                - link "More" [ref=e693] [cursor=pointer]:
+                  - /url: newest?next=48117047&n=31
+    - row "Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact Search:" [ref=e694]:
+      - cell "Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact Search:" [ref=e695]:
+        - img
+        - table [ref=e696]:
+          - rowgroup [ref=e697]:
+            - row [ref=e698]:
+              - cell [ref=e699]
+        - generic [ref=e700]:
+          - generic [ref=e701]:
+            - link "Guidelines" [ref=e702] [cursor=pointer]:
+              - /url: newsguidelines.html
+            - text: "|"
+            - link "FAQ" [ref=e703] [cursor=pointer]:
+              - /url: newsfaq.html
+            - text: "|"
+            - link "Lists" [ref=e704] [cursor=pointer]:
+              - /url: lists
+            - text: "|"
+            - link "API" [ref=e705] [cursor=pointer]:
+              - /url: https://github.com/HackerNews/API
+            - text: "|"
+            - link "Security" [ref=e706] [cursor=pointer]:
+              - /url: security.html
+            - text: "|"
+            - link "Legal" [ref=e707] [cursor=pointer]:
+              - /url: https://www.ycombinator.com/legal/
+            - text: "|"
+            - link "Apply to YC" [ref=e708] [cursor=pointer]:
+              - /url: https://www.ycombinator.com/apply/
+            - text: "|"
+            - link "Contact" [ref=e709] [cursor=pointer]:
+              - /url: mailto:hn@ycombinator.com
+          - generic [ref=e710]:
+            - text: "Search:"
+            - textbox [ref=e711]
+```
