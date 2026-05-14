@@ -1,3 +1,5 @@
+import {EMPLOYEES_COLUMNS} from "./data/testData";
+
 export default class EmployeePage {
     #page;
     #table;
@@ -7,43 +9,9 @@ export default class EmployeePage {
         this.#page = page;
         this.#table = this.#page.locator("#employees-table");
         this.#rows = this.#table.locator('tbody tr');
-        this.#columns = {
-            id: {
-                label: 'ID',
-                type: 'number',
-            },
-            first: {
-                label: 'First Name',
-                type: 'text',
-            },
-            last: {
-                label: 'Last Name',
-                type: 'text',
-            },
-            email: {
-                label: 'Email',
-                type: 'text',
-            },
-            age: {
-                label: 'Age',
-                type: 'number',
-            },
-            salary: {
-                label: 'Salary',
-                type: 'currency',
-            },
-            dept: {
-                label: 'Dept',
-                type: 'text',
-            },
-            status: {
-                label: 'Status',
-                type: 'text',
-            },
-        };
+        this.#columns = EMPLOYEES_COLUMNS;
         this.rowsPerPage = this.#page.getByTestId('rows-per-page');
         this.searchPlaceholder = this.#page.getByRole('textbox', { name: 'Search by name, email...' });
-
     }
 
     get columns() {
@@ -69,6 +37,13 @@ export default class EmployeePage {
         return this.#page.getByTestId('pagination-info');
     }
 
+    getHeaders() {
+        return this.#table.getByRole('columnheader');
+    }
+    getHeader(string) {
+        return this.getHeaders().filter({ hasText: string });
+    }
+
     async clickRowsPerPage(option) {
         await this.rowsPerPage.selectOption(String(option));
         await this.#page.waitForTimeout(300);
@@ -83,6 +58,16 @@ export default class EmployeePage {
             .getByRole('columnheader', { name: headerName })
             .click();
     }
+
+    // async getRowData(rowIndex: number) {
+    //     const row = this.rows.nth(rowIndex);
+    //
+    //     return {
+    //         first: await row.locator('.rt-td').nth(0).textContent(),
+    //         last: await row.locator('.rt-td').nth(1).textContent(),
+    //         age: await row.locator('.rt-td').nth(3).textContent(),
+    //     };
+    // }
 
     async sortBy(columnKey) {
         const header = this.#columns[columnKey].label;

@@ -1,5 +1,5 @@
 import {expect, test} from "../fixtures/table-page";
-import {ROWS_PER_PAGE, SEARCH_VALUE} from "../pages/data/testData";
+import {EMPLOYEES_COLUMNS, ROWS_PER_PAGE, SEARCH_VALUE} from "../pages/data/testData";
 import {capitalizeFirstLetter, extractPaginationInfo} from "../utils/helper";
 import {getSortedValues} from "../utils/sorting/getSortedValues";
 
@@ -104,7 +104,6 @@ test.describe('Test pagination navigation', () => {
         }
     });
 
-
     test('Verify default first page loads correctly and pagination function is correct', async ({employeeTable}) => {
         const rowCount = await employeeTable.rowCount();
 
@@ -168,3 +167,33 @@ test.describe('Test pagination navigation', () => {
         expect(cursor).toBe('not-allowed');
     });
 });
+
+test.describe('Assert cell values by row/column', () => {
+    test('Verify column headers', async ({employeeTable}) => {
+        const expectedHeaders = Object.values(EMPLOYEES_COLUMNS)
+            .map(column => column.label);
+
+        await expect(employeeTable.getHeaders())
+            .toHaveText(expectedHeaders);
+
+        for (const header of expectedHeaders) {
+            await expect(employeeTable.getHeader(header))
+                .toBeVisible();
+        }
+    });
+
+    test('Verify cell values by row', async ({employeeTable}) => {
+        // const rowData = await employeeTable.getRowData(0);
+        //
+        // expect(rowData).toEqual({
+        //     first: 'David',
+        //     last: 'Jones',
+        //     age: '45',
+        // });
+    });
+});
+
+
+
+
+
