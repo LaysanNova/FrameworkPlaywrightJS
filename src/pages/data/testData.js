@@ -17,3 +17,37 @@ export const ROWS_PER_PAGE = {
 };
 
 export const SEARCH_VALUE = ['mich','dan.h@company.com'];
+export const EMPLOYEES_COLUMNS = {
+    id: {
+        label: 'ID',
+        type: 'number',
+    },
+    first: {
+        label: 'First Name',
+        type: 'text',
+    },
+    last: {
+        label: 'Last Name',
+        type: 'text',
+    },
+    email: {
+        label: 'Email',
+        type: 'text',
+    },
+    age: {
+        label: 'Age',
+        type: 'number',
+    },
+    salary: {
+        label: 'Salary',
+        type: 'currency',
+    },
+    dept: {
+        label: 'Dept',
+        type: 'text',
+    },
+    status: {
+        label: 'Status',
+        type: 'text',
+    },
+};
