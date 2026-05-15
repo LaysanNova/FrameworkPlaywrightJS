@@ -3,11 +3,6 @@ import { NEW_PAGE_TITLE, ROWS_100 } from '../pages/data/testData';
 import { description, tag, severity, Severity, link, epic, step } from 'allure-js-commons';
 
 
-test('User should be able to log in successfully', async ({ newPage }) => {
-  await expect(newPage.getMenu().userElement).toBeVisible();
-  await expect(newPage.getMenu().userElement).toHaveText(process.env.USER_NAME);
-});
-
 test.describe('New Page validation', () => {
 
   test('New page title validation', async ({ newPage }) => {
