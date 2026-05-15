@@ -25,14 +25,13 @@ export default class LoginPage {
         await step("Fill password", async () => {
             await this.passwordInput.fill(password);
         });
-
     }
 
     async clickLoginBtn() {
         await step("Click login button", async () => {
             await this.loginBtn.click();
         });
-        
+
         return new NewPage(this.page);
     }
 
