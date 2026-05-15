@@ -10,26 +10,28 @@ export default class EmployeePage {
         this.#table = this.#page.locator("#employees-table");
         this.#rows = this.#table.locator('tbody tr');
         this.#columns = EMPLOYEES_COLUMNS;
+
         this.rowsPerPage = this.#page.getByTestId('rows-per-page');
-        this.searchPlaceholder = this.#page.getByRole('textbox', { name: 'Search by name, email...' });
+        this.searchInput = this.#page.getByRole('textbox', { name: 'Search by name, email...' });
+
     }
 
     get columns() {
         return this.#columns;
     }
 
-    get paginateFirst() {
+    get paginateFirstButton() {
         return this.#page.getByTestId('pagination-first');
     }
-    get paginatePrev() {
+    get paginatePrevButton() {
         return this.#page.getByTestId('pagination-prev');
     }
 
-    get paginateNext() {
+    get paginateNextButton() {
         return this.#page.getByTestId('pagination-next');
     }
 
-    get paginateLast() {
+    get paginateLastButton() {
         return this.#page.getByTestId('pagination-last');
     }
 
@@ -40,16 +42,19 @@ export default class EmployeePage {
     getHeaders() {
         return this.#table.getByRole('columnheader');
     }
-    getHeader(string) {
-        return this.getHeaders().filter({ hasText: string });
+
+    getHeader(headerName) {
+        return this.#table.getByRole('columnheader', {
+            name: headerName,
+            exact: true,
+        });
     }
 
     async clickRowsPerPage(option) {
         await this.rowsPerPage.selectOption(String(option));
-        await this.#page.waitForTimeout(300);
     }
 
-    async rowCount() {
+    rowCount() {
         return this.#rows.count();
     }
 
@@ -80,51 +85,53 @@ export default class EmployeePage {
         const rows = this.#rows;
         const count = await rows.count();
 
+        const keys = Object.keys(this.#columns);
         const data = [];
 
-        for (let i = 0; i < count; i++) {
-            const cells = await this.#rows.nth(i).locator('td').allTextContents();
 
-            data.push({
-                id: cells[0],
-                first: cells[1],
-                last: cells[2],
-                email: cells[3],
-                age: cells[4],
-                salary: cells[5],
-                dept: cells[6],
-                status: cells[7],
-            });
+        for (let i = 0; i < count; i++) {
+            const row = rows.nth(i);
+
+            const cells = await row
+                .locator('td')
+                .allTextContents();
+
+            data.push(
+                Object.fromEntries(
+                    keys.map((key, index) => [key, cells[index]])
+                )
+            );
         }
+
         return data;
     }
 
-    async getTableRows() {
+    rowsLocator() {
         return this.#rows;
     }
 
     async searchFor(value){
-        await this.searchPlaceholder.fill(value);
+        await this.searchInput.fill(value);
     }
 
     async clearSearch(){
         await this.searchFor("");
     }
 
-    async clickPaginationFirst(){
-        await this.paginateFirst.click();
+    async clickPaginationFirstButton(){
+        await this.paginateFirstButton.click();
     }
 
-    async clickPaginationPrev(){
-        await this.paginatePrev.click();
+    async clickPaginationPrevButton(){
+        await this.paginatePrevButton.click();
     }
 
-    async clickPaginationNext(){
-        await this.paginateNext.click();
+    async clickPaginationNextButton(){
+        await this.paginateNextButton.click();
     }
 
-    async clickPaginationLast(){
-        await this.paginateLast.click();
+    async clickPaginationLastButton(){
+        await this.paginateLastButton.click();
     }
 
     async getTotalEmployees(){

@@ -41,7 +41,7 @@ test.describe('Table validation', () => {
         const initial = await employeeTable.getRows();
 
         for (const value of SEARCH_VALUE) {
-            await employeeTable.searchPlaceholder.fill(value);
+            await employeeTable.searchInput.fill(value);
             const filteredRows = await employeeTable.getRows();
 
             expect(filteredRows.length).toBeLessThan(initial.length);
@@ -95,10 +95,10 @@ test.describe('Test pagination navigation', () => {
                     Actual rows: ${rowCount}`
                     ).toEqual(expectedCount);
 
-                const hasNextPage  = await employeeTable.paginateNext.isEnabled();
+                const hasNextPage  = await employeeTable.paginateNextButton.isEnabled();
                 if (!hasNextPage ) break;
 
-                await employeeTable.paginateNext.click();
+                await employeeTable.clickPaginationNextButton();
                 currentPage++;
             }
         }
@@ -111,24 +111,24 @@ test.describe('Test pagination navigation', () => {
         await expect(dropdown).toHaveValue(ROWS_PER_PAGE.FIVE.toString());
         expect(rowCount).toEqual(ROWS_PER_PAGE.FIVE);
 
-        await expect(await employeeTable.paginateFirst).toBeDisabled();
-        await expect(await employeeTable.paginatePrev).toBeDisabled();
+        await expect(await employeeTable.paginateFirstButton).toBeDisabled();
+        await expect(await employeeTable.paginatePrevButton).toBeDisabled();
         await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
 
-        await expect(await employeeTable.paginateNext).toBeEnabled();
-        await expect(await employeeTable.paginateLast).toBeEnabled();
+        await expect(await employeeTable.paginateNextButton).toBeEnabled();
+        await expect(await employeeTable.paginateLastButton).toBeEnabled();
 
-        await employeeTable.clickPaginationNext();
+        await employeeTable.clickPaginationNextButton();
         await expect(await employeeTable.paginationInfo).toContainText('Page 2 of 3');
-        await expect(await employeeTable.paginatePrev).toBeEnabled();
-        await expect(await employeeTable.paginateFirst).toBeEnabled();
+        await expect(await employeeTable.paginatePrevButton).toBeEnabled();
+        await expect(await employeeTable.paginateFirstButton).toBeEnabled();
 
-        await employeeTable.clickPaginationPrev();
+        await employeeTable.clickPaginationPrevButton();
         await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
 
-        await employeeTable.clickPaginationLast();
-        await expect(await employeeTable.paginateNext).toBeDisabled();
-        await expect(await employeeTable.paginateLast).toBeDisabled();
+        await employeeTable.clickPaginationLastButton();
+        await expect(await employeeTable.paginateNextButton).toBeDisabled();
+        await expect(await employeeTable.paginateLastButton).toBeDisabled();
         await expect(await employeeTable.paginationInfo).toContainText('Page 3 of 3');
     });
 
@@ -136,21 +136,21 @@ test.describe('Test pagination navigation', () => {
         await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
 
         await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 1');
-        await expect(await employeeTable.paginateFirst).toBeDisabled();
-        await expect(await employeeTable.paginatePrev).toBeDisabled();
-        await expect(await employeeTable.paginateNext).toBeDisabled();
-        await expect(await employeeTable.paginateLast).toBeDisabled();
+        await expect(await employeeTable.paginateFirstButton).toBeDisabled();
+        await expect(await employeeTable.paginatePrevButton).toBeDisabled();
+        await expect(await employeeTable.paginateNextButton).toBeDisabled();
+        await expect(await employeeTable.paginateLastButton).toBeDisabled();
     });
 
     test('Verify pagination keeps consistent data', async ({employeeTable}) => {
-        const rows = await employeeTable.getTableRows();
+        const rows = await employeeTable.rowsLocator();
         const firstPageData = await rows.allTextContents();
 
-        await employeeTable.clickPaginationLast();
+        await employeeTable.clickPaginationLastButton();
         const lastPageData = await rows.allTextContents();
         expect(lastPageData).not.toEqual(firstPageData);
 
-        await employeeTable.clickPaginationFirst();
+        await employeeTable.clickPaginationFirstButton();
         const firstPageDataAgain = await rows.allTextContents();
         expect(firstPageDataAgain).toEqual(firstPageData);
     });
@@ -158,7 +158,7 @@ test.describe('Test pagination navigation', () => {
     test('Verify disabled next page shows not-allowed cursor', async ({employeeTable}) => {
         await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
 
-        const nextPageButton = employeeTable.paginateNext;
+        const nextPageButton = employeeTable.paginateNextButton;
         await nextPageButton.hover();
         const cursor = await nextPageButton.evaluate((el) => {
             return window.getComputedStyle(el).cursor;
