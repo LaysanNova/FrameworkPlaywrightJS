@@ -1,4 +1,5 @@
 import { step } from "allure-js-commons";
+import NewPage from "./new.page";
 
 export default class LoginPage {
     constructor(page) {
@@ -24,13 +25,14 @@ export default class LoginPage {
         await step("Fill password", async () => {
             await this.passwordInput.fill(password);
         });
-
     }
 
     async clickLoginBtn() {
         await step("Click login button", async () => {
             await this.loginBtn.click();
         });
+
+        return new NewPage(this.page);
     }
 
     async clickLoginLink() {

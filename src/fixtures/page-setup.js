@@ -3,6 +3,7 @@ import MenuComponent from '../pages/components/menu.component';
 import NewPage from '../pages/new.page';
 import PastPage from '../pages/past.page';
 import HnewsPage from "../pages/hnews.page";
+import LoginPage from "../pages/login.page";
 
 
 async function navigateToPage(page, PageClass, menuAction) {
@@ -36,6 +37,13 @@ export const test = base.extend({
         menu.goToHackerNews(),
     );
     await use(hnewsPage);
+  },
+
+  loginPage: async ({ page }, use) => {
+    const loginPage = await navigateToPage(page, LoginPage, (menu) =>
+        menu.goToLogin(),
+    );
+    await use(loginPage);
   },
 });
 
