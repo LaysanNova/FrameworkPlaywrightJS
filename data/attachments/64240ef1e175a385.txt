@@ -1,0 +1,8 @@
+[2026-05-15 20:40:37.044 +0000] INFO: Navigating to 'past' page
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-15 20:40:37.371 +0000] INFO: Successfully navigated to 'past' page
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"

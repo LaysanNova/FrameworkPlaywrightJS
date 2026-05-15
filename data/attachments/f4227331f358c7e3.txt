@@ -1,0 +1,8 @@
+[2026-05-15 20:40:08.410 +0000] INFO: Navigating to 'Hacker News'
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-15 20:40:08.594 +0000] INFO: Successfully navigated to 'Hacker News'
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
