@@ -1,4 +1,4 @@
-import {expect, test} from "../fixtures/page-setup";
+import { test, expect } from '../fixtures/userSession';
 
 test('User should be able to log in successfully', async ({ loginPage }) => {
     await loginPage.fillUsernameInput(process.env.USER_NAME);
