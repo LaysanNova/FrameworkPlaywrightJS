@@ -1,6 +1,6 @@
 import {expect, test} from "../fixtures/table-page";
-import {EMPLOYEES_COLUMNS, ROWS_PER_PAGE, SEARCH_VALUE} from "../pages/data/testData";
-import {capitalizeFirstLetter, extractPaginationInfo} from "../utils/helper";
+import {EMPLOYEE_ROWS, EMPLOYEES_COLUMNS, ROWS_PER_PAGE, SEARCH_VALUE, STATUS} from "../pages/data/testData";
+import {capitalizeFirstLetter} from "../utils/helper";
 import {getSortedValues} from "../utils/sorting/getSortedValues";
 
 
@@ -182,16 +182,40 @@ test.describe('Assert cell values by row/column', () => {
         }
     });
 
-    test('Verify cell values by row', async ({employeeTable}) => {
-        // const rowData = await employeeTable.getRowData(0);
-        //
-        // expect(rowData).toEqual({
-        //     first: 'David',
-        //     last: 'Jones',
-        //     age: '45',
-        // });
+    test('Verify cell values by row/column', async ({employeeTable}) => {
+        const rows = await employeeTable.getRows();
+        for (const [, columnData] of Object.entries(EMPLOYEES_COLUMNS)) {
+            const header = columnData.label;
+            for (let i = 0; i < rows.length; i++) {
+                const actual = (await employeeTable.getCell(i, header)).trim();
+                const columnKey = Object.entries(EMPLOYEES_COLUMNS)
+                    .find(([, v]) => v.label === header)?.[0];
+
+                const expected = EMPLOYEE_ROWS[i][columnKey];
+
+                expect(actual).toBe(expected);
+
+            }
+        }
     });
 });
+
+
+test('Verify each STATUS badge has correct color', async ({ employeeTable }) => {
+    await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
+
+    const rows = await employeeTable.getRows();
+    for (let i = 0; i < rows.length; i++) {
+
+        const status = (await employeeTable.getCell(i, 'Status')).trim();
+        const badgeColor = await employeeTable.getCellStyle(i, 'Status', 'color');
+
+        expect(badgeColor).toBe(STATUS[status].color);
+    }
+});
+
+
+
 
 
 
