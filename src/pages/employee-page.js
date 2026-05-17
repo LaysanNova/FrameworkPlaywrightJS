@@ -140,4 +140,38 @@ export default class EmployeePage {
             .locator('xpath=following-sibling::div[1]')
             .textContent();
     }
+
+    async #getColumnIndex(columnKey) {
+        const headers = this.#table.locator('thead th');
+        const texts = await headers.allTextContents();
+        const normalize = (columnKey) => columnKey.trim().toLowerCase();
+
+        return texts.findIndex(
+            (text) => normalize(text) === normalize(columnKey)
+        );
+    }
+
+    async getCell(rowIndex, columnName) {
+        const colIndex = await this.#getColumnIndex(columnName);
+
+        return await this.#rows.nth(rowIndex).locator("td").nth(colIndex).textContent();
+    }
+
+    async getCellStyle(rowIndex, columnName, styleProperty) {
+        const colIndex = await this.#getColumnIndex(columnName);
+
+        const cell = this.#rows
+            .nth(rowIndex)
+            .locator('td')
+            .nth(colIndex);
+
+        const target = await cell.locator('span').count()
+            ? cell.locator('span').first()
+            : cell;
+
+        return await target.evaluate(
+            (el, property) => getComputedStyle(el)[property],
+            styleProperty
+        );
+    }
 }
