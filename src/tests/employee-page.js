@@ -266,6 +266,32 @@ test.describe('Test dropdown filters', () => {
             return await employeeTable.rowCount();
         }).toBe(ROWS_PER_PAGE.FIVE);
     });
+
+    test('Verify employees are filtered by selected department and status', async ({ employeeTable }) => {
+
+        await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
+        const rowCountAll = await employeeTable.rowCount();
+
+        await employeeTable.selectDepartment(DEPARTMENTS.ENGINEERING );
+        await employeeTable.selectStatus(STATUS.ACTIVE.label);
+
+        const rows = await employeeTable.getRows();
+
+        for (let i = 0; i < rows.length; i++) {
+            const department = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.dept.label);
+            expect(department).toBe(DEPARTMENTS.ENGINEERING);
+
+            const status = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.status.label);
+            expect(status).toBe(STATUS.ACTIVE.label);
+        }
+
+        await employeeTable.selectDepartment(ALL_DEPARTMENTS );
+        await employeeTable.selectStatus(ALL_STATUS);
+
+        await expect.poll(async () => {
+            return await employeeTable.rowCount();
+        }).toBe(rowCountAll);
+    });
 });
 
 
