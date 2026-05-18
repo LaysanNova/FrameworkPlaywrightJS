@@ -1,5 +1,13 @@
 import {expect, test} from "../fixtures/table-page";
-import {EMPLOYEE_ROWS, EMPLOYEES_COLUMNS, ROWS_PER_PAGE, SEARCH_VALUE, STATUS} from "../pages/data/testData";
+import {
+    ALL_DEPARTMENTS, ALL_STATUS,
+    DEPARTMENTS,
+    EMPLOYEE_ROWS,
+    EMPLOYEES_COLUMNS,
+    ROWS_PER_PAGE,
+    SEARCH_VALUE,
+    STATUS
+} from "../pages/data/testData";
 import {capitalizeFirstLetter} from "../utils/helper";
 import {getSortedValues} from "../utils/sorting/getSortedValues";
 
@@ -184,10 +192,11 @@ test.describe('Assert cell values by row/column', () => {
 
     test('Verify cell values by row/column', async ({employeeTable}) => {
         const rows = await employeeTable.getRows();
+
         for (const [, columnData] of Object.entries(EMPLOYEES_COLUMNS)) {
             const header = columnData.label;
             for (let i = 0; i < rows.length; i++) {
-                const actual = (await employeeTable.getCell(i, header)).trim();
+                const actual = await employeeTable.getCell(i, header);
                 const columnKey = Object.entries(EMPLOYEES_COLUMNS)
                     .find(([, v]) => v.label === header)?.[0];
 
@@ -200,23 +209,64 @@ test.describe('Assert cell values by row/column', () => {
     });
 });
 
-
 test('Verify each STATUS badge has correct color', async ({ employeeTable }) => {
     await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
 
     const rows = await employeeTable.getRows();
     for (let i = 0; i < rows.length; i++) {
 
-        const status = (await employeeTable.getCell(i, 'Status')).trim();
-        const badgeColor = await employeeTable.getCellStyle(i, 'Status', 'color');
+        const status = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.status.label);
+        const badgeColor = await employeeTable.getCellStyle(i, EMPLOYEES_COLUMNS.status.label, 'color');
 
-        expect(badgeColor).toBe(STATUS[status].color);
+        const color = Object.values(STATUS).find(
+            item => item.label === status
+        )?.color;
+
+
+        expect(badgeColor).toBe(color);
     }
 });
 
+test.describe('Test dropdown filters', () => {
+    test('Verify employees are filtered by selected department', async ({ employeeTable }) => {
+        const departmentList = Object.values(DEPARTMENTS);
 
+        for (const selectedDepartment  of departmentList) {
+            await employeeTable.selectDepartment(selectedDepartment );
+            const rows = await employeeTable.getRows();
 
+            for (let i = 0; i < rows.length; i++) {
+                const department = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.dept.label);
+                expect(department).toBe(selectedDepartment);
+            }
+        }
+        await employeeTable.selectDepartment(ALL_DEPARTMENTS);
+        await expect.poll(async () => {
+            return await employeeTable.rowCount();
+        }).toBe(ROWS_PER_PAGE.FIVE);
+    });
 
+    test('Verify employees are filtered by selected status', async ({ employeeTable }) => {
+        const statusList = Object.values(STATUS).map(status => status.label);
+
+        for (const selectedStatus of statusList) {
+            await employeeTable.selectStatus(selectedStatus);
+            const rows = await employeeTable.getRows();
+
+            for (let i = 0; i < rows.length; i++) {
+                const status = await employeeTable.getCell(
+                    i,
+                    EMPLOYEES_COLUMNS.status.label
+                );
+                expect(status).toBe(selectedStatus);
+            }
+        }
+        await employeeTable.selectStatus(ALL_STATUS);
+        await expect.poll(async () => {
+            return await employeeTable.rowCount();
+        }).toBe(ROWS_PER_PAGE.FIVE);
+    });
+});
 
 
 

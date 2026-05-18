@@ -14,6 +14,9 @@ export default class EmployeePage {
         this.rowsPerPage = this.#page.getByTestId('rows-per-page');
         this.searchInput = this.#page.getByRole('textbox', { name: 'Search by name, email...' });
 
+        this.departmentDropdown = this.#page.getByTestId('department-filter');
+        this.statusDropdown = this.#page.getByTestId('status-filter');
+
     }
 
     get columns() {
@@ -63,16 +66,6 @@ export default class EmployeePage {
             .getByRole('columnheader', { name: headerName })
             .click();
     }
-
-    // async getRowData(rowIndex: number) {
-    //     const row = this.rows.nth(rowIndex);
-    //
-    //     return {
-    //         first: await row.locator('.rt-td').nth(0).textContent(),
-    //         last: await row.locator('.rt-td').nth(1).textContent(),
-    //         age: await row.locator('.rt-td').nth(3).textContent(),
-    //     };
-    // }
 
     async sortBy(columnKey) {
         const header = this.#columns[columnKey].label;
@@ -154,7 +147,7 @@ export default class EmployeePage {
     async getCell(rowIndex, columnName) {
         const colIndex = await this.#getColumnIndex(columnName);
 
-        return await this.#rows.nth(rowIndex).locator("td").nth(colIndex).textContent();
+        return (await this.#rows.nth(rowIndex).locator("td").nth(colIndex).textContent()).trim();
     }
 
     async getCellStyle(rowIndex, columnName, styleProperty) {
@@ -173,5 +166,13 @@ export default class EmployeePage {
             (el, property) => getComputedStyle(el)[property],
             styleProperty
         );
+    }
+
+    async selectDepartment(department) {
+        await this.departmentDropdown.selectOption(department);
+    }
+
+    async selectStatus(status) {
+        await this.statusDropdown.selectOption(status);
     }
 }
