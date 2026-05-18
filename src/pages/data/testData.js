@@ -206,13 +206,33 @@ export const EMPLOYEE_ROWS = [
 ];
 
 export const STATUS = {
-    Active: {
+    ACTIVE: {
+        label: 'Active',
         color: 'rgb(74, 222, 128)',
     },
-    'On Leave': {
+    ON_LEAVE: {
+        label: 'On Leave',
         color: 'rgb(251, 191, 36)',
     },
-    Terminated: {
+    TERMINATED: {
+        label: 'Terminated',
         color: 'rgb(248, 113, 113)',
     },
 };
+
+export const DEPARTMENTS = {
+    DESIGN: 'Design',
+    ENGINEERING: 'Engineering',
+    EXECUTIVE: 'Executive',
+    FINANCE: 'Finance',
+    HR: 'HR',
+    MARKETING: 'Marketing',
+    PRODUCT: 'Product',
+    QA: 'QA',
+    SALES: 'Sales',
+};
+
+export const ALL_DEPARTMENTS = 'All Depts';
+export const ALL_STATUS = 'All Status';
+
+
