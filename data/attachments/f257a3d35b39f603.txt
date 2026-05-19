@@ -1,0 +1,132 @@
+[2026-05-19 20:08:44.992 +0000] INFO: Navigating to 'new' page
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-19 20:08:45.172 +0000] INFO: Successfully navigated to 'new' page
+    service: "ui-tests"
+    env: "development"
+    component: "MenuComponent"
+[2026-05-19 20:08:45.274 +0000] INFO: 0, 1779221241. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.299 +0000] INFO: 1, 1779221128. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.324 +0000] INFO: 2, 1779221096. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.349 +0000] INFO: 3, 1779221018. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.369 +0000] INFO: 4, 1779220966. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.392 +0000] INFO: 5, 1779220848. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.419 +0000] INFO: 6, 1779220822. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.449 +0000] INFO: 7, 1779220756. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.472 +0000] INFO: 8, 1779220721. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.498 +0000] INFO: 9, 1779220652. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.522 +0000] INFO: 10, 1779220618. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.549 +0000] INFO: 11, 1779220576. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.573 +0000] INFO: 12, 1779220502. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.596 +0000] INFO: 13, 1779220496. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.617 +0000] INFO: 14, 1779220428. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.645 +0000] INFO: 15, 1779220413. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.665 +0000] INFO: 16, 1779220393. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.688 +0000] INFO: 17, 1779220369. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.722 +0000] INFO: 18, 1779220360. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.761 +0000] INFO: 19, 1779220279. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.785 +0000] INFO: 20, 1779220268. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.813 +0000] INFO: 21, 1779220217. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.833 +0000] INFO: 22, 1779220144. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.858 +0000] INFO: 23, 1779220032. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.878 +0000] INFO: 24, 1779220010. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.899 +0000] INFO: 25, 1779220006. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.919 +0000] INFO: 26, 1779219984. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.939 +0000] INFO: 27, 1779219871. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.959 +0000] INFO: 28, 1779219857. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:08:45.980 +0000] INFO: 29, 1779219799. Timestamp parsed successfully
+    service: "ui-tests"
+    env: "development"
+    component: "TableComponent"
+[2026-05-19 20:09:14.753 +0000] ERROR: 30. Table did not load new rows after clicking "More".
+    service: "ui-tests"
+    env: "development"
+    component: "FooterComponent"
