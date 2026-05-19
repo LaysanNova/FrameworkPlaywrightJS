@@ -8,8 +8,8 @@ import {
     SEARCH_VALUE,
     STATUS
 } from "../pages/data/testData";
-import {capitalizeFirstLetter} from "../utils/helper";
 import {getSortedValues} from "../utils/sorting/getSortedValues";
+import {step} from "allure-js-commons";
 
 
 test.describe('Table validation', () => {
@@ -18,10 +18,12 @@ test.describe('Table validation', () => {
         for (const rowsPerPage of ROWS_PER_PAGE.values) {
 
             await employeeTable.clickRowsPerPage(rowsPerPage);
-            const rowCount = await employeeTable.rowCount();
 
-            expect(rowCount).toEqual(Math.min(rowsPerPage, totalEmployees));
+            await step(`Verify table has ${ rowsPerPage } rows.`, async () => {
+                const rowCount = await employeeTable.rowCount();
 
+                expect(rowCount).toEqual(Math.min(rowsPerPage, totalEmployees));
+            });
         }
     });
 
@@ -30,50 +32,54 @@ test.describe('Table validation', () => {
         let rows;
         for (const [key, column] of Object.entries(employeeTable.columns)) {
             for (const direction of ['asc', 'desc']) {
-                await test.step(`Sort column: ${key}`, async () => {
-                    await employeeTable.sortBy(key);
+                await employeeTable.sortBy(key);
+
+                await step(`'${key.toUpperCase()}' column should be sorted in ${direction} order`, async () => {
                     rows = await employeeTable.getRows();
-
-                    const { actual, expected } = await getSortedValues(rows, key, column.type, direction);
-
-                    expect(
-                        actual,
-                        `'${capitalizeFirstLetter(key)}' column should be sorted in ${direction} order`
-                    ).toEqual(expected);
+                    const {actual, expected} = await getSortedValues(rows, key, column.type, direction);
+                    expect(actual).toEqual(expected);
                 });
             }
         }
     });
 
     test('Verify search filtering works)', async ({employeeTable}) => {
-        const initial = await employeeTable.getRows();
+        let initial;
+
+        await step(`Get rows before filtering.`, async () => {
+            initial = await employeeTable.getRows();
+        });
 
         for (const value of SEARCH_VALUE) {
-            await employeeTable.searchInput.fill(value);
-            const filteredRows = await employeeTable.getRows();
+            await employeeTable.fillSearchInput(value);
 
-            expect(filteredRows.length).toBeLessThan(initial.length);
+            await step(`Verify table is not empty and every row has value '${ value }.`, async () => {
+                const filteredRows = await employeeTable.getRows();
+                expect(filteredRows.length).toBeLessThan(initial.length);
 
-            for (const row of filteredRows) {
-                const matches = [row.first, row.last, row.email]
-                    .some(field =>
-                        field.toLowerCase().includes(value.toLowerCase())
-                    );
+                for (const row of filteredRows) {
+                    const matches = [row.first, row.last, row.email]
+                        .some(field =>
+                            field.toLowerCase().includes(value.toLowerCase())
+                        );
 
-                expect(
-                    matches,
-                    `Search validation failed. Expected value: ${SEARCH_VALUE}, row: ${JSON.stringify(row)}`
-                ).toBeTruthy();
-            }
+                    expect(
+                        matches,
+                        `Search validation failed. Expected value: ${SEARCH_VALUE}, row: ${JSON.stringify(row)}`
+                    ).toBeTruthy();
+                }
+            });
+        }
+        await employeeTable.clearSearch();
 
-            await employeeTable.clearSearch();
+        await step(`Verify table is not filtered after reset.`, async () => {
             const reset = await employeeTable.getRows();
 
             expect(
                 reset.length,
                 `Clear search failed: expected ${initial.length} rows, but got ${reset.length}. Reset rows: ${JSON.stringify(reset)}`
             ).toBe(initial.length);
-        }
+        });
     });
 });
 
@@ -86,93 +92,115 @@ test.describe('Test pagination navigation', () => {
 
             await employeeTable.clickRowsPerPage(rowsPerPage);
 
-            let currentPage = 1;
+            await step(`Verify pagination for ${rowsPerPage} rows`, async () => {
 
-            while (true) {
-                const rowCount = await employeeTable.rowCount();
+                let currentPage = 1;
 
-                const remainingEmployees = totalEmployees - rowsPerPage * (currentPage - 1);
-                const expectedCount = Math.min(rowsPerPage, remainingEmployees);
+                while (true) {
+                    const rowCount = await employeeTable.rowCount();
 
-                expect(
-                    rowCount,
-                    `Pagination mismatch:
-                    Rows per page: ${rowsPerPage}
-                    Page: ${currentPage}
-                    Expected rows: ${expectedCount}
-                    Actual rows: ${rowCount}`
-                    ).toEqual(expectedCount);
+                    const remainingEmployees = totalEmployees - rowsPerPage * (currentPage - 1);
+                    const expectedCount = Math.min(rowsPerPage, remainingEmployees);
 
-                const hasNextPage  = await employeeTable.paginateNextButton.isEnabled();
-                if (!hasNextPage ) break;
+                    expect(rowCount).toEqual(expectedCount);
 
-                await employeeTable.clickPaginationNextButton();
-                currentPage++;
-            }
+                    const hasNextPage  = await employeeTable.paginateNextButton.isEnabled();
+                    if (!hasNextPage ) break;
+
+                    await employeeTable.clickPaginationNextButton();
+                    currentPage++;
+                }
+            });
         }
     });
 
     test('Verify default first page loads correctly and pagination function is correct', async ({employeeTable}) => {
-        const rowCount = await employeeTable.rowCount();
 
-        const dropdown = await employeeTable.rowsPerPage;
-        await expect(dropdown).toHaveValue(ROWS_PER_PAGE.FIVE.toString());
-        expect(rowCount).toEqual(ROWS_PER_PAGE.FIVE);
+        await test.step('Verify default pagination state', async () => {
+            const rowCount = await employeeTable.rowCount();
 
-        await expect(await employeeTable.paginateFirstButton).toBeDisabled();
-        await expect(await employeeTable.paginatePrevButton).toBeDisabled();
-        await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
+            await expect(await employeeTable.rowsPerPage).toHaveValue(ROWS_PER_PAGE.FIVE.toString());
+            expect(rowCount).toEqual(ROWS_PER_PAGE.FIVE);
 
-        await expect(await employeeTable.paginateNextButton).toBeEnabled();
-        await expect(await employeeTable.paginateLastButton).toBeEnabled();
+            await expect(await employeeTable.paginateFirstButton).toBeDisabled();
+            await expect(await employeeTable.paginatePrevButton).toBeDisabled();
+            await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
 
-        await employeeTable.clickPaginationNextButton();
-        await expect(await employeeTable.paginationInfo).toContainText('Page 2 of 3');
-        await expect(await employeeTable.paginatePrevButton).toBeEnabled();
-        await expect(await employeeTable.paginateFirstButton).toBeEnabled();
+            await expect(await employeeTable.paginateNextButton).toBeEnabled();
+            await expect(await employeeTable.paginateLastButton).toBeEnabled();
+        });
 
-        await employeeTable.clickPaginationPrevButton();
-        await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
+        await test.step('Navigate to second page', async () => {
+            await employeeTable.clickPaginationNextButton();
+            await expect(await employeeTable.paginationInfo).toContainText('Page 2 of 3');
+            await expect(await employeeTable.paginatePrevButton).toBeEnabled();
+            await expect(await employeeTable.paginateFirstButton).toBeEnabled();
+        });
 
-        await employeeTable.clickPaginationLastButton();
-        await expect(await employeeTable.paginateNextButton).toBeDisabled();
-        await expect(await employeeTable.paginateLastButton).toBeDisabled();
-        await expect(await employeeTable.paginationInfo).toContainText('Page 3 of 3');
+        await test.step('Navigate back to first page', async () => {
+            await employeeTable.clickPaginationPrevButton();
+            await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 3');
+        });
+
+        await test.step('Navigate to last page', async () => {
+            await employeeTable.clickPaginationLastButton();
+            await expect(await employeeTable.paginateNextButton).toBeDisabled();
+            await expect(await employeeTable.paginateLastButton).toBeDisabled();
+            await expect(await employeeTable.paginationInfo).toContainText('Page 3 of 3');
+        });
     });
 
     test('Single Page: Verify that pagination controls are hidden if all items fit on one page.', async ({employeeTable}) => {
         await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
 
-        await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 1');
-        await expect(await employeeTable.paginateFirstButton).toBeDisabled();
-        await expect(await employeeTable.paginatePrevButton).toBeDisabled();
-        await expect(await employeeTable.paginateNextButton).toBeDisabled();
-        await expect(await employeeTable.paginateLastButton).toBeDisabled();
+        await test.step('Verify single page pagination state', async () => {
+            await expect(await employeeTable.paginationInfo).toContainText('Page 1 of 1');
+            await expect(await employeeTable.paginateFirstButton).toBeDisabled();
+            await expect(await employeeTable.paginatePrevButton).toBeDisabled();
+            await expect(await employeeTable.paginateNextButton).toBeDisabled();
+            await expect(await employeeTable.paginateLastButton).toBeDisabled();
+        });
     });
 
     test('Verify pagination keeps consistent data', async ({employeeTable}) => {
-        const rows = await employeeTable.rowsLocator();
-        const firstPageData = await rows.allTextContents();
+        let firstPageData;
+        let lastPageData;
+        let firstPageDataAgain;
 
-        await employeeTable.clickPaginationLastButton();
-        const lastPageData = await rows.allTextContents();
-        expect(lastPageData).not.toEqual(firstPageData);
+        await test.step('Capture data from the first page', async () => {
+            const rows = await employeeTable.rowsLocator();
+            firstPageData = await rows.allTextContents();
+        });
 
-        await employeeTable.clickPaginationFirstButton();
-        const firstPageDataAgain = await rows.allTextContents();
-        expect(firstPageDataAgain).toEqual(firstPageData);
+        await test.step('Navigate to the last page and verify data is different', async () => {
+            await employeeTable.clickPaginationLastButton();
+            const rows = await employeeTable.rowsLocator();
+            lastPageData = await rows.allTextContents();
+            expect(lastPageData).not.toEqual(firstPageData);
+        });
+
+        await test.step('Return to the first page and verify data consistency', async () => {
+            await employeeTable.clickPaginationFirstButton();
+
+            const rows = await employeeTable.rowsLocator();
+            firstPageDataAgain = await rows.allTextContents();
+
+            expect(firstPageDataAgain).toEqual(firstPageData);
+        });
     });
 
     test('Verify disabled next page shows not-allowed cursor', async ({employeeTable}) => {
         await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
 
-        const nextPageButton = employeeTable.paginateNextButton;
-        await nextPageButton.hover();
-        const cursor = await nextPageButton.evaluate((el) => {
-            return window.getComputedStyle(el).cursor;
-        });
+        await test.step('Verify next button has not-allowed cursor when disabled', async () => {
+            const nextPageButton = employeeTable.paginateNextButton;
+            await nextPageButton.hover();
+            const cursor = await nextPageButton.evaluate((el) => {
+                return window.getComputedStyle(el).cursor;
+            });
 
-        expect(cursor).toBe('not-allowed');
+            expect(cursor).toBe('not-allowed');
+        });
     });
 });
 
@@ -211,20 +239,22 @@ test.describe('Assert cell values by row/column', () => {
 
 test('Verify each STATUS badge has correct color', async ({ employeeTable }) => {
     await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
+    await test.step('Verify status badge colors per row', async () => {
+        const rows = await employeeTable.getRows();
 
-    const rows = await employeeTable.getRows();
-    for (let i = 0; i < rows.length; i++) {
+        for (let i = 0; i < rows.length; i++) {
 
-        const status = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.status.label);
-        const badgeColor = await employeeTable.getCellStyle(i, EMPLOYEES_COLUMNS.status.label, 'color');
+            const status = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.status.label);
+            const badgeColor = await employeeTable.getCellStyle(i, EMPLOYEES_COLUMNS.status.label, 'color');
 
-        const color = Object.values(STATUS).find(
-            item => item.label === status
-        )?.color;
+            const color = Object.values(STATUS).find(
+                item => item.label === status
+            )?.color;
 
 
-        expect(badgeColor).toBe(color);
-    }
+            expect(badgeColor).toBe(color);
+        }
+    });
 });
 
 test.describe('Test dropdown filters', () => {
@@ -233,17 +263,23 @@ test.describe('Test dropdown filters', () => {
 
         for (const selectedDepartment  of departmentList) {
             await employeeTable.selectDepartment(selectedDepartment );
-            const rows = await employeeTable.getRows();
 
-            for (let i = 0; i < rows.length; i++) {
-                const department = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.dept.label);
-                expect(department).toBe(selectedDepartment);
-            }
+            await test.step(`Verify all rows belong to department: ${selectedDepartment}`, async () => {
+                const rows = await employeeTable.getRows();
+
+                for (let i = 0; i < rows.length; i++) {
+                    const department = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.dept.label);
+                    expect(department).toBe(selectedDepartment);
+                }
+            });
         }
         await employeeTable.selectDepartment(ALL_DEPARTMENTS);
-        await expect.poll(async () => {
-            return await employeeTable.rowCount();
-        }).toBe(ROWS_PER_PAGE.FIVE);
+
+        await test.step('Verify Reset department filter', async () => {
+            await expect.poll(async () => {
+                return await employeeTable.rowCount();
+            }).toBe(ROWS_PER_PAGE.FIVE);
+        });
     });
 
     test('Verify employees are filtered by selected status', async ({ employeeTable }) => {
@@ -251,46 +287,61 @@ test.describe('Test dropdown filters', () => {
 
         for (const selectedStatus of statusList) {
             await employeeTable.selectStatus(selectedStatus);
-            const rows = await employeeTable.getRows();
 
-            for (let i = 0; i < rows.length; i++) {
-                const status = await employeeTable.getCell(
-                    i,
-                    EMPLOYEES_COLUMNS.status.label
-                );
-                expect(status).toBe(selectedStatus);
-            }
+            await test.step(`Verify all rows belong to status:: ${selectedStatus}`, async () => {
+                const rows = await employeeTable.getRows();
+
+                for (let i = 0; i < rows.length; i++) {
+                    const status = await employeeTable.getCell(
+                        i,
+                        EMPLOYEES_COLUMNS.status.label
+                    );
+                    expect(status).toBe(selectedStatus);
+                }
+            });
         }
+
         await employeeTable.selectStatus(ALL_STATUS);
-        await expect.poll(async () => {
-            return await employeeTable.rowCount();
-        }).toBe(ROWS_PER_PAGE.FIVE);
+
+        await test.step('Verify reset status filter', async () => {
+            await expect.poll(async () => {
+                return await employeeTable.rowCount();
+            }).toBe(ROWS_PER_PAGE.FIVE);
+        });
     });
 
     test('Verify employees are filtered by selected department and status', async ({ employeeTable }) => {
 
+        let rowCountAll;
         await employeeTable.clickRowsPerPage(ROWS_PER_PAGE.TWENTY_FIVE);
-        const rowCountAll = await employeeTable.rowCount();
 
-        await employeeTable.selectDepartment(DEPARTMENTS.ENGINEERING );
-        await employeeTable.selectStatus(STATUS.ACTIVE.label);
+        await test.step(`Apply department '${DEPARTMENTS.ENGINEERING}' + status '${STATUS.ACTIVE.label}' filters`, async () => {
+            rowCountAll = await employeeTable.rowCount();
+            await employeeTable.selectDepartment(DEPARTMENTS.ENGINEERING );
+            await employeeTable.selectStatus(STATUS.ACTIVE.label);
+        });
+        await test.step(
+            `Verify rows have department '${DEPARTMENTS.ENGINEERING}' and status '${STATUS.ACTIVE.label}'`,
+            async () => {
 
-        const rows = await employeeTable.getRows();
+            const rows = await employeeTable.getRows();
+            for (let i = 0; i < rows.length; i++) {
+                const department = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.dept.label);
+                expect(department).toBe(DEPARTMENTS.ENGINEERING);
 
-        for (let i = 0; i < rows.length; i++) {
-            const department = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.dept.label);
-            expect(department).toBe(DEPARTMENTS.ENGINEERING);
-
-            const status = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.status.label);
-            expect(status).toBe(STATUS.ACTIVE.label);
-        }
+                const status = await employeeTable.getCell(i, EMPLOYEES_COLUMNS.status.label);
+                expect(status).toBe(STATUS.ACTIVE.label);
+            }
+        });
 
         await employeeTable.selectDepartment(ALL_DEPARTMENTS );
         await employeeTable.selectStatus(ALL_STATUS);
 
-        await expect.poll(async () => {
-            return await employeeTable.rowCount();
-        }).toBe(rowCountAll);
+        await test.step('Reset filters and verify row count restored', async () => {
+            await expect.poll(async () => {
+                return await employeeTable.rowCount();
+            }).toBe(rowCountAll);
+        });
     });
 });
 
