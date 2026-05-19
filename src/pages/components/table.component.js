@@ -26,7 +26,7 @@ export default class TableComponent {
     const rank = Number(text);
 
     if (isNaN(rank)) {
-      log.warn({ index, text }, "Could not parse rank to a number");
+      log.warn(`${ index }, ${ text }, Could not parse rank to a number`);
     }
 
     return rank;
@@ -46,7 +46,7 @@ export default class TableComponent {
   async getSubtext(rowIndex) {
     const rows = await this.getRows();
     const titleRow = rows.nth(rowIndex);
-    const subtextRow = titleRow.locator('xpath=following-sibling::tr[1]');
+    const subtextRow = titleRow.locator('+ tr');
 
     return subtextRow.locator('.subtext');
   }
@@ -62,7 +62,7 @@ export default class TableComponent {
     const titleAttr = await age.getAttribute('title');
 
     if (!titleAttr) {
-      log.error({ rowIndex }, "Missing title attribute");
+      log.error(`${rowIndex}. Missing title attribute`);
 
       throw new Error(`Row ${rowIndex} age has no title attribute`);
     }
@@ -70,20 +70,12 @@ export default class TableComponent {
     const timestamp = getUnixTimestamp(titleAttr);
 
     if (!Number.isFinite(timestamp)) {
-      log.error(
-          { rowIndex, titleAttr, timestamp },
-          "Failed to convert title attribute to Unix timestamp"
-      );
+      log.error(`${ rowIndex }, ${ titleAttr }, ${ timestamp }. Failed to convert title attribute to Unix timestamp`);
 
-      throw new Error(
-        `Row ${rowIndex} age title cannot be parsed: "${titleAttr}"`,
-      );
+      throw new Error(`Row ${rowIndex} age title cannot be parsed: ${titleAttr}`);
     }
 
-    log.info(
-        { rowIndex, timestamp },
-        "Timestamp parsed successfully"
-    );
+    log.info(`${ rowIndex }, ${ timestamp }. Timestamp parsed successfully`);
 
     return timestamp;
   }

@@ -34,9 +34,5 @@ export async function getSortedValues(pageData, key, type = 'text', direction = 
             : B - A;
     });
 
-    console.log(`direction -> ${direction}`);
-    console.log(`Actual -> ${actual}`);
-    console.log(`Expected -> ${expected}`);
-
     return { actual, expected };
 }

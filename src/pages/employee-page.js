@@ -1,4 +1,6 @@
 import {EMPLOYEES_COLUMNS} from "./data/testData";
+import {step} from "allure-js-commons";
+import {test} from "../fixtures/table-page";
 
 export default class EmployeePage {
     #page;
@@ -53,8 +55,16 @@ export default class EmployeePage {
         });
     }
 
+    async fillSearchInput(text) {
+        await step(`Fill 'Search by name, email field' with text '${text}'.`, async () => {
+            await this.searchInput.fill(text);
+        });
+    }
+
     async clickRowsPerPage(option) {
-        await this.rowsPerPage.selectOption(String(option));
+        await step(`Select option rows per page ${option}`, async () => {
+            await this.rowsPerPage.selectOption(String(option));
+        });
     }
 
     rowCount() {
@@ -62,9 +72,11 @@ export default class EmployeePage {
     }
 
     async #clickHeader(headerName) {
-        await this.#table
-            .getByRole('columnheader', { name: headerName })
-            .click();
+        await step(`Click Header ${headerName}`, async () => {
+            await this.#table
+                .getByRole('columnheader', {name: headerName})
+                .click();
+        });
     }
 
     async sortBy(columnKey) {
@@ -108,7 +120,9 @@ export default class EmployeePage {
     }
 
     async clearSearch(){
-        await this.searchFor("");
+        await step(`Clear the search field..`, async () => {
+            await this.searchFor("");
+        });
     }
 
     async clickPaginationFirstButton(){
@@ -169,10 +183,14 @@ export default class EmployeePage {
     }
 
     async selectDepartment(department) {
-        await this.departmentDropdown.selectOption(department);
+        await test.step(`Filter by department: ${department}`, async () => {
+            await this.departmentDropdown.selectOption(department);
+        });
     }
 
     async selectStatus(status) {
+        await test.step(`Filter by status: ${status}`, async () => {
         await this.statusDropdown.selectOption(status);
+        });
     }
 }

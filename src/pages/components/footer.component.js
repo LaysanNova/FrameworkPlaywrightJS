@@ -26,25 +26,13 @@ export default class FooterComponent {
 
     try {
       const nextRank = await table.getRank(0);
-      log.info(
-          { lastRank, nextRank },
-          'Validating that new rows are loaded'
-      );
+      log.info(`${ lastRank }, ${ nextRank }. Validating that new rows are loaded.`);
 
       expect(nextRank).toBe(lastRank + 1);
     } catch (error) {
-      log.error(
-          {
-            lastRank,
-            error: error.message,
-            stack: error.stack,
-          },
-          'Table did not load new rows after clicking "More"'
-      );
+      log.error(`${lastRank}. Table did not load new rows after clicking "More".`);
 
-      throw new Error(
-        `Table did not load new rows after clicking "More". Last rank is: ${lastRank}`,
-      );
+      throw new Error(`Table did not load new rows after clicking "More". Last rank is: ${lastRank}`);
     }
   }
 }
