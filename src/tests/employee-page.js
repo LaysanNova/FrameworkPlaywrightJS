@@ -209,29 +209,38 @@ test.describe('Assert cell values by row/column', () => {
         const expectedHeaders = Object.values(EMPLOYEES_COLUMNS)
             .map(column => column.label);
 
-        await expect(employeeTable.getHeaders())
-            .toHaveText(expectedHeaders);
+        await test.step(`Verify headers are ${ expectedHeaders }`, async () => {
+            await expect(employeeTable.getHeaders())
+                .toHaveText(expectedHeaders);
+        });
 
-        for (const header of expectedHeaders) {
-            await expect(employeeTable.getHeader(header))
-                .toBeVisible();
-        }
+        await test.step(`Verify all column headers are visible`, async () => {
+            for (const header of expectedHeaders) {
+                await expect(employeeTable.getHeader(header))
+                    .toBeVisible();
+            }
+        });
     });
 
     test('Verify cell values by row/column', async ({employeeTable}) => {
-        const rows = await employeeTable.getRows();
+        let rows;
+
+        await test.step(`Read data in table.`, async () => {
+            rows = await employeeTable.getRows();
+        });
 
         for (const [, columnData] of Object.entries(EMPLOYEES_COLUMNS)) {
             const header = columnData.label;
             for (let i = 0; i < rows.length; i++) {
-                const actual = await employeeTable.getCell(i, header);
                 const columnKey = Object.entries(EMPLOYEES_COLUMNS)
                     .find(([, v]) => v.label === header)?.[0];
 
                 const expected = EMPLOYEE_ROWS[i][columnKey];
 
-                expect(actual).toBe(expected);
-
+                await test.step(`Verify cell row: '${ i + 1 }' in '${ columnKey }' column has value ${ expected }`, async () => {
+                    const actual = await employeeTable.getCell(i, header);
+                    expect(actual).toBe(expected);
+                });
             }
         }
     });
